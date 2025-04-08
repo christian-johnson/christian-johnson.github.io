@@ -28,5 +28,4 @@ Welcome to my personal site! You can find an up-to-date list of my publications 
 
 About me: after receiving a PhD in physics from the University of California, Santa Cruz in 2019, I became interested in public policy, and went to work for the RAND Corporation in Washington, DC. Over time, I became more and more interested in elections and democracy issues, which led me to my current role at VoteShield (part of [Protect Democracy](https://protectdemocracy.org)).
 
-Outside of work, I'm passionate about Ultimate, public transit, and bicycling.  
-
+Outside of work, I'm passionate about Ultimate, public transit, and bicycling.
