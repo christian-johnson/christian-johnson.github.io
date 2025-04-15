@@ -11,6 +11,7 @@ chart:
 Like many data scientists, I'm a big fan of REPL-driven and notebook workflows because they allows me to quickly inspect data and iterate on ideas.
 A typical problem might be: given some (large-ish) data set, build and fit a model, and then evaluate how well the model performs.
 The steps, generally, are:
+
 1. Import necessary libraries
 2. Load the data into memory from disk or a database
 3. Instantiate the model
@@ -45,7 +46,7 @@ The following is a (nonexhaustive) list of tools that I've experimented with, an
 
 #### [Org-mode notebooks (in Emacs)](https://orgmode.org/worg/org-contrib/babel/intro.html)
 
-**Pros:** Highly adaptable with elisp scripts. Multi-language support in a single document (e.g., Python code blocks can seamlessly interface with Bash or elisp blocks). 
+**Pros:** Highly adaptable with elisp scripts. Multi-language support in a single document (e.g., Python code blocks can seamlessly interface with Bash or elisp blocks).
 
 **Cons:** No real LSP support (despite many folks' attempts). Scrolling over large or numerous plots is buggy.
 
@@ -53,7 +54,8 @@ The following is a (nonexhaustive) list of tools that I've experimented with, an
 
 **Pros:** Fast. Good LSP support.
 
-**Cons:** Zed's business model nags you about signing in and using their collaboration features, and the devs are [unwilling](https://github.com/zed-industries/zed/issues/13218) to change that. 
+**Cons:** Zed's business model nags you about signing in and using their collaboration features, and the devs are [unwilling](https://github.com/zed-industries/zed/issues/13218) to change that.
+
 #### [Euporie](https://github.com/joouha/euporie)
 
 **Pros:** Widget support. Full TUI Jupyter experience.
@@ -70,13 +72,13 @@ The following is a (nonexhaustive) list of tools that I've experimented with, an
 
 **Pros:** Nice UI (JS widgets work). Dependencies can be specified between blocks so that the notebook is perfectly reproduceable.
 
-**Cons:** Not particularly customizable. Using your favorite text editor to write raw Python files is cumbersome - each block is delimited by an @app.cell decorator, and has to live within a function (to see what I mean, take a look at one of the [examples](https://github.com/marimo-team/marimo/blob/main/examples/markdown/details.py)). 
+**Cons:** Not particularly customizable. Using your favorite text editor to write raw Python files is cumbersome - each block is delimited by an @app.cell decorator, and has to live within a function (to see what I mean, take a look at one of the [examples](https://github.com/marimo-team/marimo/blob/main/examples/markdown/details.py)).
 
 #### [Helix](https://helix-editor.com) + IPython
 
-**Pros:** Fast, customizable, full LSP support. Up and running with literally 2 lines of code. 
+**Pros:** Fast, customizable, full LSP support. Up and running with literally 2 lines of code.
 
-**Cons:** No widget support. Plugins not available yet. 
+**Cons:** No widget support. Plugins not available yet.
 
 Previously, I used Emacs and Org-mode code blocks.
 It works great (if you install the [emacs-jupyter](https://github.com/emacs-jupyter/jupyter) plugin), but I became increasingly frustrated by the lack of LSP support and a few other rough edges, like the poor image handling.
@@ -92,6 +94,7 @@ And I'm able to reproduce a REPL-driven development with just the following snip
 "S-s"= [":pipe-to wezterm cli send-text --pane-id $(wezterm cli list --format json | jq '.[] | select(.title | contains(\"IPython\"))| .pane_id' -r)",
 ":pipe-to wezterm cli send-text --no-paste --pane-id $(wezterm cli list --format json | jq '.[] | select(.title | contains(\"IPython\"))| .pane_id' -r) '\r'"]
 ```
+
 This defines two keybindings:
 
 When in Normal mode, `I` launches an IPython REPL in my WezTerm session on the right side of the screen.
