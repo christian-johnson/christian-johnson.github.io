@@ -1,7 +1,7 @@
 ---
 layout: post
 title: REPL-driven development in Helix
-date: 2025-04-10
+date: 2025-04-15
 description: A workflow using IPython in Helix.
 tags: programming
 categories:
