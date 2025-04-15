@@ -23,7 +23,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/publications/";
           },
-        },{id: "post-hello-world",
+        },{id: "post-repl-driven-development-in-helix",
+        
+          title: "REPL-driven development in Helix",
+        
+        description: "A workflow using IPython in Helix.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/helix-ipython/";
+          
+        },
+      },{id: "post-hello-world",
         
           title: "Hello world!",
         
