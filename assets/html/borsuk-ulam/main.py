@@ -25,18 +25,19 @@ def get_latest_gfs(max_lookback_hours=12):
     gfs_time = current_eastern_time.replace(
         minute=0, second=0, microsecond=0
     ) - timedelta(hours=offset)
-
+    idx = 1 * (offset > 3)
     for _ in range(0, max_lookback_hours, 6):
         year = gfs_time.year
         month = f"{gfs_time.month:02}"
         day = f"{gfs_time.day:02}"
         hour = f"{gfs_time.hour:02}"
-        temp_url = f"https://nomads.ncep.noaa.gov/dods/gfs_1p00/gfs{year}{month}{day}/gfs_1p00_{hour}z.ascii?tmp2m[{offset}:1:{offset}][0:1:179][0:1:359]"
-        pres_url = f"https://nomads.ncep.noaa.gov/dods/gfs_1p00/gfs{year}{month}{day}/gfs_1p00_{hour}z.ascii?pressfc[{offset}:1:{offset}][0:1:179][0:1:359]"
+        temp_url = f"https://nomads.ncep.noaa.gov/dods/gfs_1p00/gfs{year}{month}{day}/gfs_1p00_{hour}z.ascii?tmp2m[{idx}:1:{idx}][0:1:179][0:1:359]"
+        pres_url = f"https://nomads.ncep.noaa.gov/dods/gfs_1p00/gfs{year}{month}{day}/gfs_1p00_{hour}z.ascii?pressfc[{idx}:1:{idx}][0:1:179][0:1:359]"
         try:
             s = open_url(proxy_url + temp_url).read()
             p = open_url(proxy_url + pres_url).read()
 
+            print(temp_url)
             lons = np.array(s.split("\n")[-2].split(", "), dtype=float)
             lats = np.array(s.split("\n")[-4].split(", "), dtype=float)
 
