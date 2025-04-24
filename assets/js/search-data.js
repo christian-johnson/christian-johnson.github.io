@@ -23,7 +23,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/publications/";
           },
-        },{id: "post-repl-driven-development-in-helix",
+        },{id: "post-an-real-time-demonstration-of-the-borsuk-ulam-theorem",
+        
+          title: "An real-time demonstration of the Borsuk-Ulam theorem",
+        
+        description: "Finding antipodes on the Earth with equal temperature and pressure.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/pyodide/";
+          
+        },
+      },{id: "post-repl-driven-development-in-helix",
         
           title: "REPL-driven development in Helix",
         
