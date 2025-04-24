@@ -31,8 +31,8 @@ def get_latest_gfs(max_lookback_hours=12):
         month = f"{gfs_time.month:02}"
         day = f"{gfs_time.day:02}"
         hour = f"{gfs_time.hour:02}"
-        temp_url = f"https://nomads.ncep.noaa.gov/dods/gfs_1p00/gfs{year}{month}{day}/gfs_1p00_{hour}z.ascii?tmp2m[0:1:0][0:1:179][0:1:359]"
-        pres_url = f"https://nomads.ncep.noaa.gov/dods/gfs_1p00/gfs{year}{month}{day}/gfs_1p00_{hour}z.ascii?pressfc[0:1:0][0:1:179][0:1:359]"
+        temp_url = f"https://nomads.ncep.noaa.gov/dods/gfs_1p00/gfs{year}{month}{day}/gfs_1p00_{hour}z.ascii?tmp2m[{offset}:1:{offset}][0:1:179][0:1:359]"
+        pres_url = f"https://nomads.ncep.noaa.gov/dods/gfs_1p00/gfs{year}{month}{day}/gfs_1p00_{hour}z.ascii?pressfc[{offset}:1:{offset}][0:1:179][0:1:359]"
         try:
             s = open_url(proxy_url + temp_url).read()
             p = open_url(proxy_url + pres_url).read()
@@ -94,7 +94,6 @@ def find_matching_antipodes(df):
         (np.abs(merged["tmp2m_diff"]) < threshold)
         & (np.abs(merged["press_diff"]) < threshold)
     ]
-    print(len(equals))
 
     # Optionally, return only the original columns
     return equals[df.columns]
