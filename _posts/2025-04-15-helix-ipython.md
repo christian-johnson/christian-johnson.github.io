@@ -88,7 +88,7 @@ As you've already guessed from the title of this blog post, I have (for the time
 Helix is a relatively young TUI text editor written in Rust that takes a "batteries-included" philosophy: my config is 42 lines long as of this writing (compared to my Emacs config, which was over 1000 lines).
 And I'm able to reproduce a REPL-driven development with just the following snippet:
 
-```{toml}
+```toml
 [keys.normal]
 "S-i" = ":sh wezterm cli split-pane --horizontal --percent 40 --cwd $(pwd) -- sh -c 'uv run ipython' >/dev/null"
 "S-s"= [":pipe-to wezterm cli send-text --pane-id $(wezterm cli list --format json | jq '.[] | select(.title | contains(\"IPython\"))| .pane_id' -r)",
