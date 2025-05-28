@@ -23,7 +23,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/publications/";
           },
-        },{id: "post-an-real-time-demonstration-of-the-borsuk-ulam-theorem",
+        },{id: "post-the-doge-debacle-part-1-by-christian-johnson",
+        
+          title: 'The DOGE debacle, part 1 - by Christian Johnson <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
+        
+        description: "A former USDS engineer on why government systems can’t be updated with a “full rewrite”",
+        section: "Posts",
+        handler: () => {
+          
+            window.open("https://www.ifyoucankeepit.org/p/the-doge-debacle-part-1", "_blank");
+          
+        },
+      },{id: "post-an-real-time-demonstration-of-the-borsuk-ulam-theorem",
         
           title: "An real-time demonstration of the Borsuk-Ulam theorem",
         
@@ -56,30 +67,4 @@ ninja.data = [{
             window.location.href = "/blog/2025/hello-world/";
           
         },
-      },{
-      id: 'light-theme',
-      title: 'Change theme to light',
-      description: 'Change the theme of the site to Light',
-      section: 'Theme',
-      handler: () => {
-        setThemeSetting("light");
-      },
-    },
-    {
-      id: 'dark-theme',
-      title: 'Change theme to dark',
-      description: 'Change the theme of the site to Dark',
-      section: 'Theme',
-      handler: () => {
-        setThemeSetting("dark");
-      },
-    },
-    {
-      id: 'system-theme',
-      title: 'Use system default theme',
-      description: 'Change the theme of the site to System Default',
-      section: 'Theme',
-      handler: () => {
-        setThemeSetting("system");
-      },
-    },];
+      },];
