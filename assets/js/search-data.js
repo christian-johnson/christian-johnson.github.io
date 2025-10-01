@@ -23,7 +23,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/publications/";
           },
-        },{id: "post-the-doge-debacle-part-1-by-christian-johnson",
+        },{id: "post-a-rent-versus-buy-calculator-with-extra-options",
+        
+          title: "A rent versus buy calculator with extra options",
+        
+        description: "Vibe-coding a simple little web app.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/rent-buy/";
+          
+        },
+      },{id: "post-the-doge-debacle-part-1-by-christian-johnson",
         
           title: 'The DOGE debacle, part 1 - by Christian Johnson <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
         
