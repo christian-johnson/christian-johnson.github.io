@@ -1,0 +1,19 @@
+[project]
+name = "wasm-map"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "ipython>=9.1.0",
+    "matplotlib-backend-wezterm>=2.1.2",
+    "matplotlib>=3.10.1",
+    "pandas>=2.2.3",
+    "jupyterlab>=4.4.0",
+    "altair>=5.5.0",
+    "vega-datasets>=0.9.0",
+    "networkx>=3.4.2",
+    "geopandas>=1.0.1",
+    "openpyxl>=3.1.5",
+    "tqdm>=4.67.1",
+]

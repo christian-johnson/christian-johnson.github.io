@@ -1,0 +1,28 @@
+{{ define "main" }}
+  <header>
+    {{ if .Params.showBreadcrumbs | default (site.Params.list.showBreadcrumbs | default false) }}
+      {{ partial "breadcrumbs.html" . }}
+    {{ end }}
+    <h1 class="mt-5 text-4xl font-extrabold text-neutral-900 dark:text-neutral">{{ .Title }}</h1>
+  </header>
+
+  <section class="mt-12 prose flex max-w-full flex-col dark:prose-invert">
+    <div class="min-w-0 min-h-0 max-w-prose w-full">
+      {{ .Content }}
+    </div>
+  </section>
+
+  {{ $items := slice }}
+  {{ range site.Data.projects }}
+    {{ range .items }}
+      {{ $items = $items | append . }}
+    {{ end }}
+  {{ end }}
+
+  <section class="w-full grid gap-8 sm:grid-cols-2 lg:grid-cols-3 mt-12">
+    {{ range $items }}
+      {{ partial "project-card.html" . }}
+    {{ end }}
+  </section>
+
+{{ end }}

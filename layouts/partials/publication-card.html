@@ -1,0 +1,44 @@
+<article class="relative min-h-full min-w-full overflow-hidden rounded-lg border border-primary-500 dark:border-neutral-600">
+  <div class="p-4">
+    <header>
+      <a
+        {{ with .html }}
+          href="{{ . }}" target="_blank" rel="external"
+        {{ else with .url }}
+          href="{{ . }}" target="_blank" rel="external"
+        {{ end }}
+        class="not-prose decoration-primary-500 dark:text-neutral text-xl font-bold text-neutral-800 hover:underline hover:underline-offset-2">
+        <h2>
+          {{ .title | emojify }}<span class="inline-block cursor-default align-top text-xs text-neutral-400 dark:text-neutral-500">
+            <span class="rtl:hidden">&#8599;</span>
+            <span class="ltr:hidden">&#8598;</span>
+          </span>
+        </h2>
+      </a>
+    </header>
+    <div class="text-sm text-neutral-500 dark:text-neutral-400 mt-1">
+      {{ if .author_list }}
+        {{ delimit (first 5 .author_list) ", " }}{{ if gt (len .author_list) 5 }}...{{ end }}
+      {{ else }}
+        {{ .author }}
+      {{ end }}
+    </div>
+    <div class="text-xs text-neutral-400 dark:text-neutral-500 mt-2">
+      <span class="italic">
+        {{ if .journal }}
+          {{ .journal }}
+        {{ else if .booktitle }}
+          {{ .booktitle }}
+        {{ else if .institution }}
+          {{ .institution }}
+        {{ else if .school }}
+          {{ .school }}
+        {{ end }}
+        {{ if .volume }}(Vol. {{ .volume }}{{ if .number }}, No. {{ .number }}{{ end }}){{ end }}
+      </span>
+      {{ with .month }}
+        <span class="ml-1 text-neutral-400 dark:text-neutral-600">&bull; {{ . }} {{ $.year }}</span>
+      {{ end }}
+    </div>
+  </div>
+</article>

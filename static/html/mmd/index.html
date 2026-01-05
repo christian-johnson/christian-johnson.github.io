@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>County Data Explorer</title>
+    <!-- Load dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.23.4/full/pyodide.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Generating example multimember district maps</h1>
+            <p class="intro">
+              This app generates a set of contiguous, county-bounded districts such that each district has roughly the same representation in a legislative body (population estimates are from US Census data, current as of July 1, 2021).
+              <br>
+              <br>
+              Note that there are many potential solutions to finding a suitable set of districts; this app generates them in a random way, so you will get different results each time you run it.
+              In some states, it may be trickier to find a solution than in others, depending on the connectivity of the state's counties. If the algorithm fails to find a solution, it will automatically try again (up to 10 times) with a different initial starting guess.
+              <br>
+              <br>
+              The tolerance parameter determines how similar the population per representative of each district needs to be in order for a solution to be valid. Higher tolerance will converge faster, and if you set the tolerance too low, it may not converge at all. 
+              <br>
+              <br>
+              The estimated partisan breakdown is calculated by aggregating the results of the 2020 presidential election in each district, and allocating legislature seats based on the proportion of total votes. Because the 2020 election was three years ago, and because local races will invariably be influenced by factors other than national partisanship, the partisan breakdowns should be viewed as a rough estimate for illustration purposes - not a firm prediction of precisely what would happen under these maps.
+              <br>
+              <br>
+            </p>
+        </header>
+        
+        <div class="controls-card">
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="state-select">Select State</label>
+                    <select id="state-select">
+                        <option value="" disabled selected>Choose a state</option>
+                        <option value="Alabama">Alabama</option>
+                        <option value="Alaska">Alaska</option>
+                        <option value="Arizona">Arizona</option>
+                        <option value="Arkansas">Arkansas</option>
+                        <option value="California">California</option>
+                        <option value="Colorado">Colorado</option>
+                        <option value="Connecticut">Connecticut</option>
+                        <option value="Delaware">Delaware</option>
+                        <option value="Florida">Florida</option>
+                        <option value="Georgia">Georgia</option>
+                        <option value="Hawaii">Hawaii</option>
+                        <option value="Idaho">Idaho</option>
+                        <option value="Illinois">Illinois</option>
+                        <option value="Indiana">Indiana</option>
+                        <option value="Iowa">Iowa</option>
+                        <option value="Kansas">Kansas</option>
+                        <option value="Kentucky">Kentucky</option>
+                        <option value="Louisiana">Louisiana</option>
+                        <option value="Maine">Maine</option>
+                        <option value="Maryland">Maryland</option>
+                        <option value="Massachusetts">Massachusetts</option>
+                        <option value="Michigan">Michigan</option>
+                        <option value="Minnesota">Minnesota</option>
+                        <option value="Mississippi">Mississippi</option>
+                        <option value="Missouri">Missouri</option>
+                        <option value="Montana">Montana</option>
+                        <option value="Nebraska">Nebraska</option>
+                        <option value="Nevada">Nevada</option>
+                        <option value="New Hampshire">New Hampshire</option>
+                        <option value="New Jersey">New Jersey</option>
+                        <option value="New Mexico">New Mexico</option>
+                        <option value="New York">New York</option>
+                        <option value="North Carolina">North Carolina</option>
+                        <option value="North Dakota">North Dakota</option>
+                        <option value="Ohio">Ohio</option>
+                        <option value="Oklahoma">Oklahoma</option>
+                        <option value="Oregon">Oregon</option>
+                        <option value="Pennsylvania">Pennsylvania</option>
+                        <option value="Rhode Island">Rhode Island</option>
+                        <option value="South Carolina">South Carolina</option>
+                        <option value="South Dakota">South Dakota</option>
+                        <option value="Tennessee">Tennessee</option>
+                        <option value="Texas">Texas</option>
+                        <option value="Utah">Utah</option>
+                        <option value="Vermont">Vermont</option>
+                        <option value="Virginia">Virginia</option>
+                        <option value="Washington">Washington</option>
+                        <option value="West Virginia">West Virginia</option>
+                        <option value="Wisconsin">Wisconsin</option>
+                        <option value="Wyoming">Wyoming</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="n_representatives">Total # representatives:</label>
+                    <input type="number" id="n_representatives" name="n_representatives" min="20" max="200" step="1" value="62">
+                </div>
+
+                <div class="form-group">
+                    <label for="min_reps">Minimum # representatives per district:</label>
+                    <input type="number" id="min_reps" name="min_reps" min="1" max="20" step="1" value="3">
+                </div>
+
+                <div class="form-group">
+                    <label for="n_districts">Number of districts (5 - 30):</label>
+                    <input type="number" id="n_districts" name="n_districts" min="5" max="30" step="1" value="8">
+                </div>
+
+                <div class="form-group">
+                    <label for="tolerance">Tolerance (%):</label>
+                    <input type="number" id="tolerance" name="tolerance" min="5" max="25" step="1" value="15">
+                </div>
+            
+            </div>
+            <div class="button-container">
+                <button id="generate-btn" disabled>Generate Map</button>
+            </div>
+        </div>
+        <div class="chart-container">
+            <h2 id="map-title" class="centered-title"></h2>
+            <div id="map-content" class="map-layout">
+                <div id="map-chart" class="message" style="width: 100%; height: 500px;">Select a state and generate a map to begin.</div>
+                <div id="map-table"></div>
+            </div>
+            <div class="loading-overlay" id="loading-overlay">
+                <div id="spinner" class="simple-spinner"></div>
+            </div>
+        </div>
+        <footer>
+            <p>Protect Democracy © 2025 - Powered by Pyodide</p>
+        </footer>
+    </div>
+
+    <script>
+        // UI elements
+        const loadingOverlay = document.getElementById('loading-overlay');
+        const generateBtn = document.getElementById('generate-btn');
+        const mapChartDiv = document.getElementById('map-chart');
+        let spinner = null;
+        let pyodide = null;
+        
+        // Function to show/hide spinner
+        function showSpinner() {
+            loadingOverlay.style.display = 'flex';
+            if (spinner) {
+                try {
+                    spinner.spin(document.getElementById('spinner'));
+                } catch (e) {
+                    console.warn("Error starting spinner:", e);
+                }
+            }
+        }
+        
+        function hideSpinner() {
+            loadingOverlay.style.display = 'none';
+            if (spinner) {
+                try {
+                    spinner.stop();
+                } catch (e) {
+                    console.warn("Error stopping spinner:", e);
+                }
+            }
+        }
+
+        // Show error message in a user-friendly way
+        function showError(message) {
+            mapChartDiv.innerHTML = `
+                <div class="error-message">
+                    <p>${message}</p>
+                    <p>Please try again with different parameters.</p>
+                </div>
+            `;
+        }
+
+        // Show status message
+        function showMessage(message) {
+            mapChartDiv.innerHTML = `<div class="message">${message}</div>`;
+        }
+        let worker;
+
+        function createHTMLTable(data) {
+            if (!data || data.length === 0) return "<p>No data</p>";
+
+            const headers = Object.keys(data[0]);
+            const thead = `<thead><tr>${headers.map(h => `<th>${h}</th>`).join('')}</tr></thead>`;
+            const rows = data.map(row => 
+                `<tr>${headers.map(h => `<td>${row[h]}</td>`).join('')}</tr>`
+            ).join('');
+            return `<table class="result-table">${thead}<tbody>${rows}</tbody></table>`;
+        }
+        function initWorker() {
+            showSpinner();
+            worker = new Worker('pyodide-worker.js');
+
+            worker.onmessage = (event) => {
+                const { type, message, data } = event.data;
+
+                switch (type) {
+                    case "status":
+                        showMessage(message);
+                        break;
+                    case "ready":
+                        showMessage("Environment ready. Select a state and generate districts!");
+                        generateBtn.addEventListener('click', generateMap);
+                        generateBtn.disabled = false;
+                        hideSpinner();
+                        break;
+                    case "result":
+                        try {
+                            const parsed = JSON.parse(data);
+                            const { chart, table, title } = parsed;
+
+                            // Update title
+                            const titleDiv = document.getElementById('map-title');
+                            titleDiv.textContent = title;
+
+                            // Render chart
+                            const chartDiv = document.getElementById('map-chart');
+                            chartDiv.innerHTML = '';
+                            vegaEmbed('#map-chart', JSON.parse(chart));
+
+                            // Render table
+                            const tableDiv = document.getElementById('map-table');
+                            tableDiv.innerHTML = createHTMLTable(JSON.parse(table));
+
+                            hideSpinner();
+                        } catch (err) {
+                            console.error("Error rendering result:", err);
+                            showError("Failed to render the output.");
+                            hideSpinner();
+                        }
+                        break;
+                    case "error":
+                        console.error("Worker error:", message);
+                        showError(`Error from Python: ${message}`);
+                        hideSpinner();
+                        break;
+                }
+            };
+
+            worker.onerror = (e) => {
+                showError(`Worker exception: ${e.message}`);
+                hideSpinner();
+            };
+        }
+
+        function generateMap() {
+            showSpinner();
+
+            const state = document.getElementById('state-select').value;
+            const minReps = document.getElementById('min_reps').value;
+            const totalReps = document.getElementById('n_representatives').value;
+            const nDistricts = document.getElementById('n_districts').value;
+            const tolerance = document.getElementById('tolerance').value;
+
+            worker.postMessage({ state, minReps, totalReps, nDistricts, tolerance });
+        }
+
+        // Load Pyodide worker on page load
+        window.addEventListener('DOMContentLoaded', initWorker);        
+    </script>
+</body>
+</html>

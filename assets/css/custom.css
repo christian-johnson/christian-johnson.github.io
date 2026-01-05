@@ -1,0 +1,135 @@
+/* Custom CSS overrides for Blowfish theme */
+
+/* 
+  Fix for inline code background consistency.
+  Overrides the default Tailwind configuration which lacks a background for light mode
+  and has a hardcoded background for dark mode.
+  Uses variables defined in assets/css/schemes/nord.css.
+*/
+
+.prose code:not(pre code) {
+  background-color: rgba(var(--my-light-mode-code), 1) !important;
+  padding: 0.1rem 0.2rem;
+  border-radius: 0.25rem;
+}
+
+.dark .prose code:not(pre code) {
+  background-color: rgba(var(--my-dark-mode-code-bg), 1) !important;
+  padding: 0.1rem 0.2rem;
+  border-radius: 0.25rem;
+}
+
+/* --- Nord Syntax Highlighting --- */
+
+/* Code block title customization */
+.codeblock-title {
+  background-color: var(--nord-1) !important;
+  color: var(--nord-6) !important;
+  border-bottom: 1px solid var(--nord-3) !important;
+  font-weight: 600;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+/* Copy button customization */
+.copy-button {
+  top: calc(2.5rem + 12px) !important; /* 12px below the ~2.5rem title bar */
+  right: 12px !important;              /* 12px from the right edge */
+  border-radius: 4px !important;       /* 4-cornered button */
+  background-color: var(--nord-3) !important; /* Nord 3 - subtle background */
+  color: var(--nord-6) !important;            /* Nord 6 - clear text */
+}
+
+.copy-button:hover {
+  background-color: var(--nord-8) !important; /* Nord 8 - dark mode accent */
+  color: var(--nord-0) !important;            /* Nord 0 - dark text on accent */
+}
+
+/* Nord palette for Chroma and fallback for unknown languages */
+.highlight-wrapper pre,
+.highlight-wrapper code,
+.highlight-wrapper .chroma,
+.highlight-wrapper .bg { 
+  color: var(--nord-4) !important; 
+  background-color: #20242c !important; /* Custom dark bg */
+}
+.chroma .err { color: var(--nord-11) }
+.chroma .hl { background-color: #424853 }
+.chroma .lnt { color: #6c6f74 }
+.chroma .ln { color: #6c6f74 }
+.chroma .k { color: var(--nord-9); font-weight:bold }
+.chroma .kc { color: var(--nord-9); font-weight:bold }
+.chroma .kd { color: var(--nord-9); font-weight:bold }
+.chroma .kn { color: var(--nord-9); font-weight:bold }
+.chroma .kp { color: var(--nord-9) }
+.chroma .kr { color: var(--nord-9); font-weight:bold }
+.chroma .kt { color: var(--nord-9) }
+.chroma .na { color: var(--nord-7) }
+.chroma .nc { color: var(--nord-7) }
+.chroma .no { color: var(--nord-7) }
+.chroma .nd { color: var(--nord-12) }
+.chroma .ni { color: var(--nord-12) }
+.chroma .ne { color: var(--nord-11) }
+.chroma .nl { color: var(--nord-7) }
+.chroma .nn { color: var(--nord-7) }
+.chroma .py { color: var(--nord-7) }
+.chroma .nt { color: var(--nord-9) }
+.chroma .nb { color: var(--nord-9) }
+.chroma .bp { color: var(--nord-9) }
+.chroma .nf { color: var(--nord-8) }
+.chroma .fm { color: var(--nord-8) }
+.chroma .s { color: var(--nord-14) }
+.chroma .sa { color: var(--nord-14) }
+.chroma .sb { color: var(--nord-14) }
+.chroma .sc { color: var(--nord-14) }
+.chroma .dl { color: var(--nord-14) }
+.chroma .sd { color: #616e87 }
+.chroma .s2 { color: var(--nord-14) }
+.chroma .se { color: var(--nord-13) }
+.chroma .sh { color: var(--nord-14) }
+.chroma .si { color: var(--nord-14) }
+.chroma .sx { color: var(--nord-14) }
+.chroma .sr { color: var(--nord-13) }
+.chroma .s1 { color: var(--nord-14) }
+.chroma .ss { color: var(--nord-14) }
+.chroma .m { color: var(--nord-15) }
+.chroma .mb { color: var(--nord-15) }
+.chroma .mf { color: var(--nord-15) }
+.chroma .mh { color: var(--nord-15) }
+.chroma .mi { color: var(--nord-15) }
+.chroma .il { color: var(--nord-15) }
+.chroma .mo { color: var(--nord-15) }
+.chroma .o { color: var(--nord-9) }
+.chroma .ow { color: var(--nord-9); font-weight:bold }
+.chroma .p { color: var(--nord-6) }
+.chroma .c { color: #616e87; font-style:italic }
+.chroma .ch { color: #616e87; font-style:italic }
+.chroma .cm { color: #616e87; font-style:italic }
+.chroma .c1 { color: #616e87; font-style:italic }
+.chroma .cs { color: #616e87; font-style:italic }
+.chroma .cp { color: var(--nord-10); font-style:italic }
+.chroma .cpf { color: var(--nord-10); font-style:italic }
+.chroma .gd { color: var(--nord-11) }
+.chroma .ge { font-style:italic }
+.chroma .gr { color: var(--nord-11) }
+.chroma .gh { color: var(--nord-8); font-weight:bold }
+.chroma .gi { color: var(--nord-14) }
+.chroma .gp { color: var(--nord-3); font-weight:bold }
+.chroma .gs { font-weight:bold }
+.chroma .gu { color: var(--nord-8); font-weight:bold }
+.chroma .gt { color: var(--nord-11) }
+
+/* Fix for missing Tailwind aspect-video class */
+.aspect-video {
+  aspect-ratio: 16 / 9;
+}
+
+/* Missing Tailwind Utility Classes for Projects Layout */
+.gap-8 {
+  gap: 2rem;
+}
+
+@media (min-width: 1024px) {
+  .lg\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}

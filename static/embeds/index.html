@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Borsuk-Ulam interactive</title>
+    <!-- Load dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.23.4/full/pyodide.js" crossorigin=""></script>
+</head>
+<body>
+    <div class="app-wrapper">
+        <div class="button-container">
+            <button id="generate-btn" disabled>Generate!</button>
+        </div>
+        <div class="chart-container">
+            <div id="map-content" class="map-layout"></div>
+            <div class="loading-overlay" id="loading-overlay">
+                <div id="spinner" class="simple-spinner"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // UI elements
+        const loadingOverlay = document.getElementById('loading-overlay');
+        const generateBtn = document.getElementById('generate-btn');
+        const mapChartDiv = document.getElementById('map-content');
+        let spinner = null;
+        let pyodide = null;
+        
+        // Function to show/hide spinner
+        function showSpinner() {
+            loadingOverlay.style.display = 'flex';
+            if (spinner) {
+                try {
+                    spinner.spin(document.getElementById('spinner'));
+                } catch (e) {
+                    console.warn("Error starting spinner:", e);
+                }
+            }
+        }
+        
+        function hideSpinner() {
+            loadingOverlay.style.display = 'none';
+            if (spinner) {
+                try {
+                    spinner.stop();
+                } catch (e) {
+                    console.warn("Error stopping spinner:", e);
+                }
+            }
+        }
+
+        // Show error message in a user-friendly way
+        function showError(message) {
+            mapChartDiv.innerHTML = `
+                <div class="error-message">
+                    <p>${message}</p>
+                </div>
+            `;
+        }
+
+        // Show status message
+        function showMessage(message) {
+            mapChartDiv.innerHTML = `<div class="message">${message}</div>`;
+        }
+        let worker;
+
+        function initWorker() {
+            showSpinner();
+            worker = new Worker('pyodide-worker.js');
+
+            worker.onmessage = (event) => {
+                const { type, message, data } = event.data;
+
+                switch (type) {
+                    case "status":
+                        showMessage(message);
+                        break;
+                    case "ready":
+                        showMessage("Ready! Click the button to draw a pair of points.");
+                        generateBtn.addEventListener('click', generateMap);
+                        generateBtn.disabled = false;
+                        hideSpinner();
+                        break;
+                    case "result":
+                        try {
+                            const parsed = JSON.parse(data);
+                            const chart = parsed;
+
+                            // Render chart
+                            const chartDiv = document.getElementById('map-content');
+                            chartDiv.innerHTML = '';
+                            vegaEmbed('#map-content', chart);
+
+                            hideSpinner();
+                        } catch (err) {
+                            console.error("Error rendering result:", err);
+                            showError("Failed to render the output.");
+                            hideSpinner();
+                        }
+                        break;
+                    case "error":
+                        console.error("Worker error:", message);
+                        showError(`Error from Python: ${message}`);
+                        hideSpinner();
+                        break;
+                }
+            };
+
+            worker.onerror = (e) => {
+                showError(`Worker exception: ${e.message}`);
+                hideSpinner();
+            };
+        }
+
+        function generateMap() {
+            showSpinner();
+            worker.postMessage({});
+        }
+
+        // Load Pyodide worker on page load
+        window.addEventListener('DOMContentLoaded', initWorker);        
+    </script>
+</body>
+</html>

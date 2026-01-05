@@ -1,0 +1,512 @@
+[
+  {
+    "year": "2024",
+    "items": [
+      {
+        "html": "https://www.rand.org/pubs/research_reports/RRA1506-1.html",
+        "publisher": "RAND",
+        "year": "2024",
+        "author": "Menthe, Lance, Steier, Joshua, Hastings, Katherine C, Snyder, Don, Bennett, Bart E, Johnson, Christian",
+        "title": "A Primer on Graph-Theoretic Models and Metrics: Using Graphs for Modeling and Assessing Robustness",
+        "ENTRYTYPE": "article",
+        "ID": "menthe2024primer",
+        "key": "menthe2024primer",
+        "author_list": [
+          "Menthe, Lance",
+          "Steier, Joshua",
+          "Hastings, Katherine C",
+          "Snyder, Don",
+          "Bennett, Bart E",
+          "Johnson, Christian"
+        ]
+      }
+    ]
+  },
+  {
+    "year": "2023",
+    "items": [
+      {
+        "html": "https://protectdemocracy.org/work/generative-ai-make-election-threats-worse/",
+        "url": "https://protectdemocracy.org/work/generative-ai-make-election-threats-worse/",
+        "month": "November",
+        "year": "2023",
+        "title": "How generative AI could make existing election threats even worse",
+        "author": "Nicole Schneidman, Christian Johnson",
+        "ENTRYTYPE": "misc",
+        "ID": "SchneidmanJohnson2023",
+        "key": "SchneidmanJohnson2023",
+        "author_list": [
+          "Nicole Schneidman",
+          "Christian Johnson"
+        ]
+      },
+      {
+        "html": "https://www.sciencepolicyjournal.org/article_1038126_JSPG220107.html",
+        "url": "https://www.sciencepolicyjournal.org/article_1038126_JSPG220107.html",
+        "month": "March",
+        "year": "2023",
+        "pages": "Technology Assessment",
+        "number": "01",
+        "volume": "22",
+        "journal": "Journal of Science Policy & Governance",
+        "title": "International Opportunities and Technical Challenges for the Space Elevator",
+        "author": "Christian Johnson",
+        "ENTRYTYPE": "article",
+        "ID": "Johnson2023",
+        "key": "Johnson2023",
+        "author_list": [
+          "Christian Johnson"
+        ]
+      }
+    ]
+  },
+  {
+    "year": "2022",
+    "items": [
+      {
+        "html": "https://www.rand.org/pubs/research_reports/RRA997-1.html",
+        "year": "2022",
+        "author": "Mayer, Lauren A, Shelton, William, Johnson, Christian, Adducchio, Daniel, Khan, Raza, Genc, Suzanne, Tarraf, Danielle C, Beyene, Nahom M",
+        "title": "Improving the Technical Requirements Development Process for Weapon Systems",
+        "ENTRYTYPE": "article",
+        "ID": "mayer2022improving",
+        "key": "mayer2022improving",
+        "author_list": [
+          "Mayer, Lauren A",
+          "Shelton, William",
+          "Johnson, Christian",
+          "Adducchio, Daniel",
+          "Khan, Raza",
+          "Genc, Suzanne",
+          "Tarraf, Danielle C",
+          "Beyene, Nahom M"
+        ]
+      },
+      {
+        "html": "https://www.rand.org/pubs/research_reports/RRA873-1.html",
+        "publisher": "RAND",
+        "year": "2022",
+        "author": "Posard, Marek, Johnson, Christian, Melin, Julia L, Ellinger, Emily, Reininger, Hilary",
+        "title": "Looking for lies: An exploratory analysis for automated detection of deception",
+        "ENTRYTYPE": "techreport",
+        "ID": "posard2022looking",
+        "key": "posard2022looking",
+        "author_list": [
+          "Posard, Marek",
+          "Johnson, Christian",
+          "Melin, Julia L",
+          "Ellinger, Emily",
+          "Reininger, Hilary"
+        ]
+      },
+      {
+        "pdf": "https://apps.dtic.mil/sti/trecms/pdf/AD1156753.pdf",
+        "year": "2022",
+        "author": "Johnson, Christian, Marcellino, William",
+        "title": "Bag-of-words algorithms can supplement transformer sequence classification & improve model interpretability",
+        "ENTRYTYPE": "techreport",
+        "ID": "johnson2022bag",
+        "key": "johnson2022bag",
+        "author_list": [
+          "Johnson, Christian",
+          "Marcellino, William"
+        ]
+      },
+      {
+        "html": "https://www.rand.org/pubs/research_reports/RRA595-1.html",
+        "publisher": "RAND",
+        "year": "2022",
+        "author": "Mazarr, Michael J, Rhoades, Ashley L, Beauchamp-Mustafaga, Nathan, Blanc, Alexis A, Eaton, Derek, Feistel, Katie, Geist, Edward, Heath, Timothy R, Johnson, Christian, Langeland, Krista S, others",
+        "title": "Disrupting deterrence: Examining the effects of technologies on strategic deterrence in the 21st century",
+        "ENTRYTYPE": "techreport",
+        "ID": "mazarr2022disrupting",
+        "key": "mazarr2022disrupting",
+        "author_list": [
+          "Mazarr, Michael J",
+          "Rhoades, Ashley L",
+          "Beauchamp-Mustafaga, Nathan",
+          "Blanc, Alexis A",
+          "Eaton, Derek",
+          "Feistel, Katie",
+          "Geist, Edward",
+          "Heath, Timothy R",
+          "Johnson, Christian",
+          "Langeland, Krista S",
+          "others"
+        ]
+      },
+      {
+        "html": "https://www.rand.org/pubs/research_reports/RRA138-1.html",
+        "url": "https://www.rand.org/pubs/research_reports/RRA138-1.html",
+        "month": "July",
+        "year": "2022",
+        "institution": "RAND Corporation",
+        "title": "Forecasting End Strength in the U.S. Army Reserve: An Integrated Modeling Concept",
+        "author": "Katharina Ley Best, Jennifer Lamping Lewis, Christina Panis, Norah Griffin, Alice Shih, Christian Johnson",
+        "ENTRYTYPE": "techreport",
+        "ID": "Best2022",
+        "key": "Best2022",
+        "author_list": [
+          "Katharina Ley Best",
+          "Jennifer Lamping Lewis",
+          "Christina Panis",
+          "Norah Griffin",
+          "Alice Shih",
+          "Christian Johnson"
+        ]
+      }
+    ]
+  },
+  {
+    "year": "2021",
+    "items": [
+      {
+        "note": "Presented at the Great Plains Political Science Association annual meeting",
+        "html": "https://arxiv.org/abs/2110.03661",
+        "url": "https://arxiv.org/abs/2110.03661",
+        "year": "2021",
+        "booktitle": "Great Plains Political Science Association Annual Meeting",
+        "title": "Constraining Localized Vote Tampering in the 2020 US Presidential Election",
+        "author": "Christian Johnson",
+        "ENTRYTYPE": "inproceedings",
+        "ID": "Johnson2021",
+        "key": "Johnson2021",
+        "author_list": [
+          "Christian Johnson"
+        ]
+      },
+      {
+        "html": "https://www.rand.org/pubs/research_reports/RRA106-1.html",
+        "publisher": "RAND",
+        "year": "2021",
+        "author": "Marcellino, William, Johnson, Christian, Jaycocks, Amber, Grana, Justin, Kerrigan, Joshua, Aguirre, Jair",
+        "title": "Army Analytic Capabilities: A Case Study Within Army Contracting Command and Its Implications",
+        "ENTRYTYPE": "article",
+        "ID": "marcellino2021army",
+        "key": "marcellino2021army",
+        "author_list": [
+          "Marcellino, William",
+          "Johnson, Christian",
+          "Jaycocks, Amber",
+          "Grana, Justin",
+          "Kerrigan, Joshua",
+          "Aguirre, Jair"
+        ]
+      },
+      {
+        "html": "https://www.rand.org/pubs/perspectives/PEA779-1.html",
+        "publisher": "RAND",
+        "year": "2021",
+        "author": "Posard, Marek, Reininger, Hilary, Johnson, Christian",
+        "title": "An Exploratory Analysis of Trends in Text Data from Congressional Oversight Hearings",
+        "ENTRYTYPE": "techreport",
+        "ID": "posard2021exploratory",
+        "key": "posard2021exploratory",
+        "author_list": [
+          "Posard, Marek",
+          "Reininger, Hilary",
+          "Johnson, Christian"
+        ]
+      },
+      {
+        "html": "https://www.rand.org/pubs/research_reports/RRA583-1.html",
+        "publisher": "RAND",
+        "year": "2021",
+        "author": "Menthe, Lance, Bennett, Bart E, Rockstroh, Parousia, Johnson, Christian, Snyder, Don",
+        "title": "Graph Theoretic Algorithms for the Ground Based Strategic Deterrent Program: Prioritization and Scheduling",
+        "ENTRYTYPE": "article",
+        "ID": "menthe2021graph",
+        "key": "menthe2021graph",
+        "author_list": [
+          "Menthe, Lance",
+          "Bennett, Bart E",
+          "Rockstroh, Parousia",
+          "Johnson, Christian",
+          "Snyder, Don"
+        ]
+      },
+      {
+        "html": "https://www.rand.org/pubs/commentary/2021/11/reining-in-covid-19-disinformation-from-china-russia.html",
+        "year": "2021",
+        "journal": "RAND blog",
+        "author": "Johnson, Christian, Marcellino, William",
+        "title": "Reining in COVID-19 disinformation from China, Russia, and elsewhere",
+        "ENTRYTYPE": "article",
+        "ID": "johnson2021reining",
+        "key": "johnson2021reining",
+        "author_list": [
+          "Johnson, Christian",
+          "Marcellino, William"
+        ]
+      },
+      {
+        "html": "https://www.rand.org/pubs/research_reports/RRA112-21.html",
+        "publisher": "RAND Corporation",
+        "year": "2021",
+        "author": "Johnson, Christian, Marcellino, William",
+        "title": "Bad actors in news reporting: tracking news manipulation by state actors",
+        "ENTRYTYPE": "techreport",
+        "ID": "johnson2021bad",
+        "key": "johnson2021bad",
+        "author_list": [
+          "Johnson, Christian",
+          "Marcellino, William"
+        ]
+      },
+      {
+        "html": "https://www.rand.org/pubs/research_reports/RRA106-1.html",
+        "url": "https://www.rand.org/pubs/research_reports/RRA106-1.html",
+        "year": "2021",
+        "institution": "RAND Corporation",
+        "title": "Army Analytic Capabilities: A Case Study Within Army Contracting Command and Its Implications",
+        "author": "William Marcellino, Justin Grana, Jair Aguirre, Amber Jaycocks, Christian Johnson, Joshua Kerrigan",
+        "ENTRYTYPE": "techreport",
+        "ID": "Marcellino2021",
+        "key": "Marcellino2021",
+        "author_list": [
+          "William Marcellino",
+          "Justin Grana",
+          "Jair Aguirre",
+          "Amber Jaycocks",
+          "Christian Johnson",
+          "Joshua Kerrigan"
+        ]
+      }
+    ]
+  },
+  {
+    "year": "2020",
+    "items": [
+      {
+        "html": "https://www.rand.org/pubs/research_reports/RRA704-2.html",
+        "publisher": "RAND",
+        "year": "2020",
+        "author": "Marcellino, William, Johnson, Christian, Posard, Marek, Helmus, Todd C",
+        "title": "Foreign interference in the 2020 election: Tools for detecting online election interference",
+        "ENTRYTYPE": "techreport",
+        "ID": "marcellino2020foreign",
+        "key": "marcellino2020foreign",
+        "author_list": [
+          "Marcellino, William",
+          "Johnson, Christian",
+          "Posard, Marek",
+          "Helmus, Todd C"
+        ]
+      }
+    ]
+  },
+  {
+    "year": "2019",
+    "items": [
+      {
+        "html": "https://escholarship.org/uc/item/87r9t3ng",
+        "adsnote": "Provided by the SAO/NASA Astrophysics Data System",
+        "adsurl": "https://ui.adsabs.harvard.edu/abs/2019PhDT.........5J",
+        "month": "June",
+        "year": "2019",
+        "school": "University of California, Santa Cruz",
+        "keywords": "Astrophysics;High energy physics",
+        "title": "Searching for New Physics with the Fermi Large Area Telescope",
+        "author": "Johnson, III, Arne Christian",
+        "ENTRYTYPE": "phdthesis",
+        "ID": "2019PhDT.........5J",
+        "key": "2019PhDT.........5J",
+        "author_list": [
+          "Johnson, III, Arne Christian"
+        ]
+      },
+      {
+        "abstract": "If dark matter is composed of primordial black holes, such   black holes can span an enormous range of masses. A variety of   observational constraints exist on massive black holes, and black   holes with masses below 1015 g are often assumed to have   completely evaporated by the present day. But if the evaporation   process halts at the Planck scale, it would leave behind a stable   relic, and such objects could constitute the entirety of dark   matter. Neutral Planck-scale relics are effectively invisible to   both astrophysical and direct detection searches. However, we argue   that such relics may typically carry electric charge, making them   visible to terrestrial detectors. We evaluate constraints and   detection prospects in detail, and show that if not already ruled   out by monopole searches, this scenario can be largely explored   within the next decade using existing or planned experimental   equipment. A single detection would have enormous implications for   cosmology, black hole physics, and quantum gravity.",
+        "journal": "Journal of Cosmology and Astroparticle Physics",
+        "title": "Direct detection of primordial black hole relics as dark matter",
+        "author": "Lehmann, Benjamin V., Johnson, Christian, Profumo, Stefano, Schwemberger, Thomas",
+        "pages": "046",
+        "number": "10",
+        "volume": "2019",
+        "publisher": "",
+        "month": "oct",
+        "year": "2019",
+        "html": "https://dx.doi.org/10.1088/1475-7516/2019/10/046",
+        "url": "https://dx.doi.org/10.1088/1475-7516/2019/10/046",
+        "doi": "10.1088/1475-7516/2019/10/046",
+        "ENTRYTYPE": "article",
+        "ID": "Lehmann_2019",
+        "key": "Lehmann_2019",
+        "author_list": [
+          "Lehmann, Benjamin V.",
+          "Johnson, Christian",
+          "Profumo, Stefano",
+          "Schwemberger, Thomas"
+        ]
+      },
+      {
+        "html": "https://link.aps.org/doi/10.1103/PhysRevD.99.103007",
+        "url": "https://link.aps.org/doi/10.1103/PhysRevD.99.103007",
+        "doi": "10.1103/PhysRevD.99.103007",
+        "publisher": "American Physical Society",
+        "month": "May",
+        "year": "2019",
+        "numpages": "13",
+        "pages": "103007",
+        "issue": "10",
+        "volume": "99",
+        "journal": "Phys. Rev. D",
+        "collaboration": "Fermi-LAT Collaboration",
+        "author": "Johnson, Christian, Caputo, Regina, Karwin, Christopher, Murgia, Simona, Ritz, Steve, Shelton, Jessie",
+        "title": "Search for gamma-ray emission from $p$-wave dark matter annihilation in the Galactic Center",
+        "ENTRYTYPE": "article",
+        "ID": "PhysRevD.99.103007",
+        "key": "PhysRevD.99.103007",
+        "author_list": [
+          "Johnson, Christian",
+          "Caputo, Regina",
+          "Karwin, Christopher",
+          "Murgia, Simona",
+          "Ritz, Steve",
+          "Shelton, Jessie"
+        ]
+      }
+    ]
+  },
+  {
+    "year": "2018",
+    "items": [
+      {
+        "abstract": "Black holes with masses below approximately 1015 g are expected to emit gamma-rays with energies above a few tens of MeV, which can be detected by the Fermi Large Area Telescope (LAT). Although black holes with these masses cannot be formed as a result of stellar evolution, they may have formed in the early universe and are therefore called primordial black holes (PBHs). Previous searches for PBHs have focused on either short-timescale bursts or the contribution of PBHs to the isotropic gamma-ray emission. We show that, in cases of individual PBHs, the Fermi-LAT is most sensitive to PBHs with temperatures above approximately 16 GeV and masses 6\u00a0\u00d7\u00a01011 g, which it can detect out to a distance of about 0.03 pc. These PBHs have a remaining lifetime of months to years at the start of the Fermi mission. They would appear as potentially moving point sources with gamma-ray emission that become spectrally harder and brighter with time until the PBH completely evaporates. In this paper, we develop a new algorithm to detect the proper motion of gamma-ray point sources, and apply it to 318 unassociated point sources at a high galactic latitude in the third Fermi-LAT source catalog. None of the unassociated point sources with spectra consistent with PBH evaporation show significant proper motion. Using the nondetection of PBH candidates, we derive a 99% confidence limit on the PBH evaporation rate in the vicinity of Earth, . This limit is similar to the limits obtained with ground-based gamma-ray observatories.",
+        "journal": "The Astrophysical Journal",
+        "title": "Search for Gamma-Ray Emission from Local Primordial Black Holes with the Fermi Large Area Telescope",
+        "author": "Ackermann, M., Atwood, W. B., Baldini, L., Ballet, J., Barbiellini, G., Bastieri, D., Bellazzini, R., Berenji, B., Bissaldi, E., Blandford, R. D., Bloom, E. D., Bonino, R., Bottacini, E., Bregeon, J., Bruel, P., Buehler, R., Cameron, R. A., Caputo, R., Caraveo, P. A., Cavazzuti, E., Charles, E., Chekhtman, A., Cheung, C. C., Chiaro, G., Ciprini, S., Cohen-Tanugi, J., Conrad, J., Costantin, D., D\u2019Ammando, F., Palma, F. de, Digel, S. W., Lalla, N. Di, Mauro, M. Di, Venere, L. Di, Favuzzi, C., Fegan, S. J., Focke, W. B., Franckowiak, A., Fukazawa, Y., Funk, S., Fusco, P., Gargano, F., Gasparrini, D., Giglietto, N., Giordano, F., Giroletti, M., Green, D., Grenier, I. A., Guillemot, L., Guiriec, S., Horan, D., J\u00f3hannesson, G., Johnson, C., Kensei, S., Kocevski, D., Kuss, M., Larsson, S., Latronico, L., Li, J., Longo, F., Loparco, F., Lovellette, M. N., Lubrano, P., Magill, J. D., Maldera, S., Malyshev, D., Manfreda, A., Mazziotta, M. N., McEnery, J. E., Meyer, M., Michelson, P. F., Mitthumsiri, W., Mizuno, T., Monzani, M. E., Moretti, E., Morselli, A., Moskalenko, I. V., Negro, M., Nuss, E., Ojha, R., Omodei, N., Orienti, M., Orlando, E., Ormes, J. F., Palatiello, M., Paliya, V. S., Paneque, D., Persic, M., Pesce-Rollins, M., Piron, F., Principe, G., Rain\u00f2, S., Rando, R., Razzano, M., Razzaque, S., Reimer, A., Reimer, O., Ritz, S., S\u00e1nchez-Conde, M., Sgr\u00f2, C., Siskind, E. J., Spada, F., Spandre, G., Spinelli, P., Suson, D. J., Tajima, H., Thayer, J. G., Thayer, J. B., Torres, D. F., Tosti, G., Troja, E., Valverde, J., Vianello, G., Wood, K., Wood, M., Zaharijas, G.",
+        "pages": "49",
+        "number": "1",
+        "volume": "857",
+        "publisher": "The American Astronomical Society",
+        "month": "apr",
+        "year": "2018",
+        "html": "https://dx.doi.org/10.3847/1538-4357/aaac7b",
+        "url": "https://dx.doi.org/10.3847/1538-4357/aaac7b",
+        "doi": "10.3847/1538-4357/aaac7b",
+        "ENTRYTYPE": "article",
+        "ID": "Ackermann_2018",
+        "key": "Ackermann_2018",
+        "author_list": [
+          "Ackermann, M.",
+          "Atwood, W. B.",
+          "Baldini, L.",
+          "Ballet, J.",
+          "Barbiellini, G.",
+          "Bastieri, D.",
+          "Bellazzini, R.",
+          "Berenji, B.",
+          "Bissaldi, E.",
+          "Blandford, R. D.",
+          "Bloom, E. D.",
+          "Bonino, R.",
+          "Bottacini, E.",
+          "Bregeon, J.",
+          "Bruel, P.",
+          "Buehler, R.",
+          "Cameron, R. A.",
+          "Caputo, R.",
+          "Caraveo, P. A.",
+          "Cavazzuti, E.",
+          "Charles, E.",
+          "Chekhtman, A.",
+          "Cheung, C. C.",
+          "Chiaro, G.",
+          "Ciprini, S.",
+          "Cohen-Tanugi, J.",
+          "Conrad, J.",
+          "Costantin, D.",
+          "D\u2019Ammando, F.",
+          "Palma, F. de",
+          "Digel, S. W.",
+          "Lalla, N. Di",
+          "Mauro, M. Di",
+          "Venere, L. Di",
+          "Favuzzi, C.",
+          "Fegan, S. J.",
+          "Focke, W. B.",
+          "Franckowiak, A.",
+          "Fukazawa, Y.",
+          "Funk, S.",
+          "Fusco, P.",
+          "Gargano, F.",
+          "Gasparrini, D.",
+          "Giglietto, N.",
+          "Giordano, F.",
+          "Giroletti, M.",
+          "Green, D.",
+          "Grenier, I. A.",
+          "Guillemot, L.",
+          "Guiriec, S.",
+          "Horan, D.",
+          "J\u00f3hannesson, G.",
+          "Johnson, C.",
+          "Kensei, S.",
+          "Kocevski, D.",
+          "Kuss, M.",
+          "Larsson, S.",
+          "Latronico, L.",
+          "Li, J.",
+          "Longo, F.",
+          "Loparco, F.",
+          "Lovellette, M. N.",
+          "Lubrano, P.",
+          "Magill, J. D.",
+          "Maldera, S.",
+          "Malyshev, D.",
+          "Manfreda, A.",
+          "Mazziotta, M. N.",
+          "McEnery, J. E.",
+          "Meyer, M.",
+          "Michelson, P. F.",
+          "Mitthumsiri, W.",
+          "Mizuno, T.",
+          "Monzani, M. E.",
+          "Moretti, E.",
+          "Morselli, A.",
+          "Moskalenko, I. V.",
+          "Negro, M.",
+          "Nuss, E.",
+          "Ojha, R.",
+          "Omodei, N.",
+          "Orienti, M.",
+          "Orlando, E.",
+          "Ormes, J. F.",
+          "Palatiello, M.",
+          "Paliya, V. S.",
+          "Paneque, D.",
+          "Persic, M.",
+          "Pesce-Rollins, M.",
+          "Piron, F.",
+          "Principe, G.",
+          "Rain\u00f2, S.",
+          "Rando, R.",
+          "Razzano, M.",
+          "Razzaque, S.",
+          "Reimer, A.",
+          "Reimer, O.",
+          "Ritz, S.",
+          "S\u00e1nchez-Conde, M.",
+          "Sgr\u00f2, C.",
+          "Siskind, E. J.",
+          "Spada, F.",
+          "Spandre, G.",
+          "Spinelli, P.",
+          "Suson, D. J.",
+          "Tajima, H.",
+          "Thayer, J. G.",
+          "Thayer, J. B.",
+          "Torres, D. F.",
+          "Tosti, G.",
+          "Troja, E.",
+          "Valverde, J.",
+          "Vianello, G.",
+          "Wood, K.",
+          "Wood, M.",
+          "Zaharijas, G."
+        ]
+      }
+    ]
+  }
+]

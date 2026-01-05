@@ -1,0 +1,14 @@
+{{- $title := or .Attributes.title "" -}}
+{{- $lang := or .Type "text" -}}
+<div class="highlight-wrapper">
+  <div class="codeblock-title">
+    {{- if $title -}}
+      {{- $title -}}
+    {{- else if and (ne $lang "text") (ne $lang "") -}}
+      {{- $lang | title -}}
+    {{- else -}}
+      CODE
+    {{- end -}}
+  </div>
+  {{- transform.Highlight .Inner $lang .Options -}}
+</div>

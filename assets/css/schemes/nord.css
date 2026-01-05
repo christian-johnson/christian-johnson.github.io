@@ -1,0 +1,123 @@
+:root {
+  /*
+    -------------------------------------------------------------------------
+    Define your colors here. These are organized by their semantic role.
+    Update these Hex codes to quickly swap the color scheme.
+    -------------------------------------------------------------------------
+  */
+
+  /* Nord Palette Definitions */
+  --nord-0: #2e3440;
+  --nord-1: #3b4252;
+  --nord-2: #434c5e;
+  --nord-3: #4c566a;
+  --nord-4: #d8dee9;
+  --nord-5: #e5e9f0;
+  --nord-6: #eceff4;
+  --nord-7: #8fbcbb;
+  --nord-8: #88c0d0;
+  --nord-9: #81a1c1;
+  --nord-10: #5e81ac;
+  --nord-11: #bf616a;
+  --nord-12: #d08770;
+  --nord-13: #ebcb8b;
+  --nord-14: #a3be8c;
+  --nord-15: #b48ead;
+
+  /* Palette */
+  --my-dark-mode-background:       46,52,64; 
+  --my-dark-mode-text-subtle:      76, 86, 106;/* 174,185,205; */ 
+  --my-light-mode-background:      216,222,233; 
+  --my-light-mode-text-subtle:     111, 119, 135;/* 59,66,82; */ 
+  --my-dark-mode-accent:           136,192,208; 
+  --my-light-mode-accent:          94,129,172; 
+  --my-dark-mode-inline-code:      191,97,106;
+  --my-light-mode-inline-code:     191,97,106;
+  --my-light-mode-code:            236,239,244;
+  --my-dark-mode-code-bg:          36,41,51; /* Nord 1 */
+
+  /* Text - Dark Mode */
+  --my-dark-mode-text-main:        var(--my-light-mode-background); 
+  --my-dark-mode-text-title:       var(--my-light-mode-background);
+  --my-dark-mode-text-body:        var(--my-dark-mode-code-copy);
+
+  /* Text - Light Mode */
+  --my-light-mode-text-main:       var(--my-dark-mode-background); 
+  --my-light-mode-text-header:     var(--my-light-mode-text-main);
+  --my-light-mode-text-body:       var(--my-light-mode-text-main);
+
+  /* Accents */
+  --dividers-and-underlines:       var(--my-light-mode-accent);
+  --my-dark-mode-code-copy:        var(--my-light-mode-accent);
+
+  /* Unused / Placeholders */
+  --unused-red:                 255, 0, 0;
+  --unused-yellow:              255, 255, 0;
+  --unused-green:               0, 255, 0;
+
+  /*
+    -------------------------------------------------------------------------
+    Maps the palette above to the specific variables required by the theme.
+    -------------------------------------------------------------------------
+  */
+
+  /* light mode background & dark mode text */
+  /* Note: Blowfish wants these colors to match, in defiance of the color theme. */
+  --color-neutral:        var(--my-light-mode-background);
+
+  /* Some sub headings in dark mode */
+  --color-neutral-50:     var(--my-dark-mode-text-main);
+
+  /* Unused */
+  --color-neutral-100:    var(--unused-green);
+
+  /* the un-highlighted background in light mode of code copy */
+  /* and also the text foreground in dark mode of code copy */
+  --color-neutral-200:    var(--my-light-mode-code);
+
+  /* highlight on hover in light mode for code copy */
+  --color-primary-100:    var(--my-light-mode-code);
+
+  /* Dark mode title text */
+  --color-neutral-300:    var(--my-dark-mode-text-title);
+
+  /* dark mode subtle text */
+  --color-neutral-400:    var(--my-light-mode-text-subtle);
+
+  /* light mode subtle text, and dark mode icons */
+  --color-neutral-500:    var(--my-light-mode-text-subtle);
+
+  /* Dark mode body text */
+  --color-neutral-600:    var(--my-dark-mode-text-body);
+
+  /* Light mode body text */
+  --color-neutral-700:    var(--my-light-mode-text-body);
+
+  /* dark mode background */
+  --color-neutral-800:    var(--my-dark-mode-background);
+
+  /* light mode header text */
+  --color-neutral-900:    var(--my-light-mode-text-header);
+
+  --color-primary-50:     var(--unused-yellow);
+  --color-primary-200:    var(--unused-yellow);
+  --color-primary-300:    var(--unused-yellow);
+  --color-primary-400:    var(--my-dark-mode-accent);
+  --color-primary-500:    var(--dividers-and-underlines);
+  --color-primary-600:    var(--my-light-mode-accent);
+  /* Hover links in light mode */
+  --color-primary-700:    var(--my-light-mode-accent);
+  --color-primary-800:    var(--unused-yellow);
+  --color-primary-900:    var(--unused-yellow);
+
+  --color-secondary-50:     var(--unused-yellow);
+  --color-secondary-100:    var(--unused-yellow);
+  --color-secondary-200:    var(--unused-yellow);
+  --color-secondary-300:    var(--unused-yellow);
+  --color-secondary-400:    var(--my-dark-mode-inline-code);
+  --color-secondary-500:    var(--unused-yellow);
+  --color-secondary-600:    var(--unused-yellow);
+  --color-secondary-700:    var(--my-light-mode-inline-code);
+  --color-secondary-800:    var(--unused-yellow);
+  --color-secondary-900:    var(--unused-yellow);
+}
