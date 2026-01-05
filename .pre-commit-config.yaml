@@ -1,0 +1,55 @@
+# Configuration for pre-commit.  The general goal here is to
+# easily ensure code formatting and quality with minimal
+# effort.
+#
+# See https://pre-commit.com for more information
+
+repos:
+  # Pre-commit hooks
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.6.0
+    hooks:
+      - id: check-added-large-files
+      - id: check-case-conflict
+      - id: check-merge-conflict
+      - id: check-symlinks
+      - id: check-yaml
+      - id: check-ast
+      - id: check-json
+      - id: debug-statements
+      - id: end-of-file-fixer
+      - id: mixed-line-ending
+      - id: requirements-txt-fixer
+      - id: trailing-whitespace
+      - id: mixed-line-ending
+        args: ["--fix=auto"]
+
+  # Utilize ruff's formatter which is very similar to Black.  This
+  # should run first as it may fix issues the linter has.
+  # See pyproject.toml for configuration.
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.6.8
+    hooks:
+      - id: ruff-format
+
+  -   repo: https://github.com/Yelp/detect-secrets
+      rev: v1.5.0
+      hooks:
+      -   id: detect-secrets
+          args: ['--baseline', '.secrets.baseline']
+          exclude: package.lock.json
+
+  # - repo: https://github.com/gitleaks/gitleaks
+  #   rev: v8.14.1
+  #   hooks:
+  #     - id: gitleaks
+  #       args: ["--staged"]  # Add other necessary flags
+  # Linting via ruff.  Does most things that pylint and flake8
+  # do and more.  Generally use ruff functionality if available.
+  # See pyproject.toml for configuration.
+  # TODO: Enable when ready for automatically linting/fixing
+  # - repo: https://github.com/astral-sh/ruff-pre-commit
+  #   rev: v0.5.6
+  #   hooks:
+  #     - id: ruff
+  #       args: ["--fix"]
