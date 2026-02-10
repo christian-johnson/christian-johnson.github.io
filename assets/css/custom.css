@@ -1,6 +1,6 @@
 /* Custom CSS overrides for Blowfish theme */
 
-/* 
+/*
   Fix for inline code background consistency.
   Overrides the default Tailwind configuration which lacks a background for light mode
   and has a hardcoded background for dark mode.
@@ -48,8 +48,8 @@
 .highlight-wrapper pre,
 .highlight-wrapper code,
 .highlight-wrapper .chroma,
-.highlight-wrapper .bg { 
-  color: var(--nord-4) !important; 
+.highlight-wrapper .bg {
+  color: var(--nord-4) !important;
   background-color: #20242c !important; /* Custom dark bg */
 }
 .chroma .err { color: var(--nord-11) }
@@ -132,4 +132,13 @@
   .lg\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
+}
+
+.mermaid {
+    overflow: visible !important;
+}
+
+.mermaid svg {
+    max-width: 100%;
+    height: auto;
 }
