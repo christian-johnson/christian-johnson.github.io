@@ -25,24 +25,25 @@
   --nord-15: #b48ead;
 
   /* Palette */
-  --my-dark-mode-background:       46,52,64; 
-  --my-dark-mode-text-subtle:      76, 86, 106;/* 174,185,205; */ 
-  --my-light-mode-background:      216,222,233; 
-  --my-light-mode-text-subtle:     111, 119, 135;/* 59,66,82; */ 
-  --my-dark-mode-accent:           136,192,208; 
-  --my-light-mode-accent:          94,129,172; 
+  --my-dark-mode-background:       46,52,64;
+  --my-dark-mode-text-subtle:      76, 86, 106;/* 174,185,205; */
+  --my-light-mode-background:      216,222,233;
+  --my-light-mode-text-subtle:     111, 119, 135;/* 59,66,82; */
+  --my-dark-mode-accent:           136,192,208;
+  --my-light-mode-accent:          94,129,172;
   --my-dark-mode-inline-code:      191,97,106;
   --my-light-mode-inline-code:     191,97,106;
   --my-light-mode-code:            236,239,244;
   --my-dark-mode-code-bg:          36,41,51; /* Nord 1 */
+  --my-light-mode-mermaid-bg:      194, 199, 209;
 
   /* Text - Dark Mode */
-  --my-dark-mode-text-main:        var(--my-light-mode-background); 
+  --my-dark-mode-text-main:        var(--my-light-mode-background);
   --my-dark-mode-text-title:       var(--my-light-mode-background);
   --my-dark-mode-text-body:        var(--my-dark-mode-code-copy);
 
   /* Text - Light Mode */
-  --my-light-mode-text-main:       var(--my-dark-mode-background); 
+  --my-light-mode-text-main:       var(--my-dark-mode-background);
   --my-light-mode-text-header:     var(--my-light-mode-text-main);
   --my-light-mode-text-body:       var(--my-light-mode-text-main);
 
@@ -68,8 +69,8 @@
   /* Some sub headings in dark mode */
   --color-neutral-50:     var(--my-dark-mode-text-main);
 
-  /* Unused */
-  --color-neutral-100:    var(--unused-green);
+  /* Some elements in light-mode mermaid diagrams */
+  --color-neutral-100:    var(--my-light-mode-mermaid-bg);
 
   /* the un-highlighted background in light mode of code copy */
   /* and also the text foreground in dark mode of code copy */
@@ -100,7 +101,10 @@
   --color-neutral-900:    var(--my-light-mode-text-header);
 
   --color-primary-50:     var(--unused-yellow);
-  --color-primary-200:    var(--unused-yellow);
+
+  /* Some elements in light-mode mermaid diagrams */
+  --color-primary-200:    var(--my-light-mode-code);
+
   --color-primary-300:    var(--unused-yellow);
   --color-primary-400:    var(--my-dark-mode-accent);
   --color-primary-500:    var(--dividers-and-underlines);
