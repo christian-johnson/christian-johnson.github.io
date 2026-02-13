@@ -25,7 +25,10 @@ enableEmoji = true
 
 [imaging]
   anchor = 'Center'
-
+  # exif.disableDate = false
+  # exif.disableLatLong = false
+  # exif.includeFields = ""  # Empty string includes all EXIF fields
+  #
 [taxonomies]
   tag = "tags"
   category = "categories"
