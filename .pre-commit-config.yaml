@@ -9,7 +9,6 @@ repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.6.0
     hooks:
-      - id: check-added-large-files
       - id: check-case-conflict
       - id: check-merge-conflict
       - id: check-symlinks
@@ -38,6 +37,11 @@ repos:
       -   id: detect-secrets
           args: ['--baseline', '.secrets.baseline']
           exclude: ^public/|package.lock.json
+
+  - repo: https://github.com/christian-johnson/c2pa-hugo-pre-commit
+    rev: 1.0.0
+    hooks:
+      - id: sign-hugo-images-c2pa
 
   # - repo: https://github.com/gitleaks/gitleaks
   #   rev: v8.14.1

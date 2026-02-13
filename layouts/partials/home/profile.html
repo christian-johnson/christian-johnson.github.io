@@ -6,26 +6,40 @@
   <header class="relative px-1 py-1 flex flex-col items-center mb-3">
     {{ with .Site.Params.Author.image }}
       {{ $authorImage := "" }}
+      {{ $isStatic := hasPrefix . "/" }}
       {{ if or (strings.HasPrefix . "http:") (strings.HasPrefix . "https:") }}
         {{ $authorImage = resources.GetRemote . }}
-      {{ else }}
+      {{ else if not $isStatic }}
         {{ $authorImage = resources.Get . }}
       {{ end }}
-      {{ if $authorImage }}
-        {{ $final := $authorImage }}
-        {{ $squareImage := $authorImage }}
-        {{ if not (or $disableImageOptimization (eq $authorImage.MediaType.SubType "svg")) }}
-          {{ $final = $authorImage.Fill (print "288x288 q" ( $.Site.Params.Author.imagequality | default "96" )) }}
-          {{ $shortSide := int (math.Min $authorImage.Width $authorImage.Height) }}
-          {{ $squareImage = $authorImage.Crop (printf "%dx%d" $shortSide $shortSide ) }}
+      {{ if or $authorImage $isStatic }}
+        {{ if $isStatic }}
+          {{/* Static file - use as-is without processing */}}
+          <img
+            class="mb-2 h-48 w-48 rounded-full"
+            style="object-fit: cover;"
+            width="192"
+            height="192"
+            alt="{{ $.Site.Params.Author.name | default `Author` }}"
+            src="{{ . }}"
+            data-zoom-src="{{ . }}">
+        {{ else }}
+          {{/* Asset file - process it */}}
+          {{ $final := $authorImage }}
+          {{ $squareImage := $authorImage }}
+          {{ if not (or $disableImageOptimization (eq $authorImage.MediaType.SubType "svg")) }}
+            {{ $final = $authorImage.Fill (print "288x288 q" ( $.Site.Params.Author.imagequality | default "96" )) }}
+            {{ $shortSide := int (math.Min $authorImage.Width $authorImage.Height) }}
+            {{ $squareImage = $authorImage.Crop (printf "%dx%d" $shortSide $shortSide ) }}
+          {{ end }}
+          <img
+            class="mb-2 h-48 w-48 rounded-full"
+            width="192"
+            height="192"
+            alt="{{ $.Site.Params.Author.name | default `Author` }}"
+            src="{{ $final.RelPermalink }}"
+            data-zoom-src="{{ $squareImage.RelPermalink }}">
         {{ end }}
-        <img
-          class="mb-2 h-48 w-48 rounded-full"
-          width="192"
-          height="192"
-          alt="{{ $.Site.Params.Author.name | default `Author` }}"
-          src="{{ $final.RelPermalink }}"
-          data-zoom-src="{{ $squareImage.RelPermalink }}">
       {{ end }}
     {{ end }}
     <h1 class="text-4xl font-extrabold">

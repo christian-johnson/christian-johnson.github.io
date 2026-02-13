@@ -1,0 +1,32 @@
+{
+  "claim_generator": "my-signing-app/1.0",
+    "sign_cert":"cert-chain.pem",
+    "private_key":"signing.key",
+    "alg":"es256",
+
+  "assertions": [
+    {
+      "label": "stds.schema-org.CreativeWork",
+      "data": {
+        "@context": "https://schema.org",
+        "@type": "CreativeWork",
+        "author": [
+          {
+            "@type": "Person",
+            "name": "Christian Johnson"
+          }
+        ]
+      }
+    },
+    {
+      "label": "c2pa.actions",
+      "data": {
+        "actions": [
+          {
+            "action": "c2pa.created"
+          }
+        ]
+      }
+    }
+  ]
+}

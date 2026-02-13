@@ -9,7 +9,7 @@ title = "Christian Johnson"
   isoCode = "en"
   rtl = false
   dateFormat = "2 January 2006"
-  logo = "assets/img/prof_pic.png"
+  logo = "/img/prof_pic_signed.png"
   # secondaryLogo = "img/secondary-logo.png"
   # description = "My awesome website"
   # copyright = "Copy, _right?_ :thinking_face:"
@@ -17,7 +17,7 @@ title = "Christian Johnson"
 [params.author]
   name = "Christian Johnson"
 #   email = "youremail@example.com"
-image = "img/prof_pic.jpg"
+image = "/img/prof_pic_signed.jpg"
 #   imageQuality = 96
   # headline = "Welcome to my personal site!"
 # bio = "A little bit about me"
