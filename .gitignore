@@ -1,6 +1,27 @@
 .key
 .pem
-public/
 uv.lock
 settings.toml
 pyproject.toml
+
+# Generated files
+public/
+resources/_gen/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Hugo's lock file (optional - some prefer to commit this)
+.hugo_build.lock
+
+# Local development
+.env
+.env.local
