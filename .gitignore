@@ -1,5 +1,8 @@
-.key
-.pem
+# Keys
+*.key
+*.pem
+
+# Python
 uv.lock
 settings.toml
 pyproject.toml
