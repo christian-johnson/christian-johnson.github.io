@@ -1,7 +1,7 @@
 {
   "claim_generator": "my-signing-app/1.0",
     "sign_cert":"cert-chain.pem",
-    "private_key":"signing.key",
+    "private_key":"signing-pkcs8.key",
     "alg":"es256",
 
   "assertions": [
