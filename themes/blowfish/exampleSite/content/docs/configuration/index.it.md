@@ -139,13 +139,14 @@ Il file predefinito può essere utilizzato come modello per creare lingue aggiun
 
 #### Author
 
-| Name | Default | Description |
-| --- | --- | --- |
-| `author.name` | _Not set_ | The author's name. This will be displayed in article footers, and on the homepage when the profile layout is used. |
-| `author.image` | _Not set_ | Path to the image file of the author. The image should be a 1:1 aspect ratio. The image can be placed in the site's `assets/` folder or can be external url. |
-| `author.headline` | _Not set_ | A Markdown string containing the author's headline. It will be displayed on the profile homepage under the author's name. |
-| `author.bio` | _Not set_ | A Markdown string containing the author's bio. It will be displayed in article footers. |
-| `author.links` | _Not set_ | The links to display alongside the author's details. The config file contains example links which can simply be uncommented to enable. The order that the links are displayed is determined by the order they appear in the array. Custom links can be added by providing corresponding SVG icon assets in `assets/icons/`. |
+| Name              | Default   | Description                                                                                                                                                                                                                                                                                                                 |
+| ----------------- | --------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `author.name`     | _Not set_ | The author's name. This will be displayed in article footers, and on the homepage when the profile layout is used.                                                                                                                                                                                                          |
+| `author.image`    | _Not set_ | Path to the image file of the author. The image should be a 1:1 aspect ratio. The image can be placed in the site's `assets/` folder or can be external url.                                                                                                                                                                |
+| `author.headline` | _Not set_ | A Markdown string containing the author's headline. It will be displayed on the profile homepage under the author's name.                                                                                                                                                                                                   |
+| `author.bio`      | _Not set_ | A Markdown string containing the author's bio. It will be displayed in article footers.                                                                                                                                                                                                                                     |
+| `author.links`    | _Not set_ | The links to display alongside the author's details. The config file contains example links which can simply be uncommented to enable. The order that the links are displayed is determined by the order they appear in the array. Custom links can be added by providing corresponding SVG icon assets in `assets/icons/`. |
+
 <!-- prettier-ignore-end -->
 
 ### Menus
@@ -258,6 +259,7 @@ Many of the article defaults here can be overridden on a per article basis by sp
 | `article.showComments` | `false` | Whether or not the [comments partial]({{< ref "partials#comments" >}}) is included after the article footer. |
 | `article.sharingLinks` | _Not set_ | Which sharing links to display at the end of each article. When not provided, or set to `false` no links will be displayed. Available values are: "bluesky", "email", "facebook", "line", "linkedin", "mastodon", "pinterest", "reddit", "telegram", "twitter", and "whatsapp" |
 | `article.showZenMode` | `false` | Flag to activate Zen Mode reading feature for articles. |
+| `article.externalLinkForceNewTab` | `true` | Flag per aprire i link esterni nel markdown in una nuova scheda. |
 
 ### List
 
@@ -371,15 +373,15 @@ Many of the article defaults here can be overridden on a per article basis by sp
 
 ### RSSNext
 
-| Name | Default | Description |
-| --- | --- | --- |
+| Name             | Default   | Description                                                                                                                                              |
+| ---------------- | --------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `rssnext.feedId` | _Not set_ | The rss `feedId` string provided by [RSSNext/Follow](https://follow.is/) to be included in the `rss.xml`, which can helps to claim rss feed as your own. |
 | `rssnext.userId` | _Not set_ | The rss `userId` string provided by [RSSNext/Follow](https://follow.is/) to be included in the `rss.xml`, which can helps to claim rss feed as your own. |
 
 ### Advertisement
 
-| Name                     | Default   | Description |
-| ------------------------ | --------- |-------------|
+| Name                    | Default   | Description                                                                                                               |
+| ----------------------- | --------- | ------------------------------------------------------------------------------------------------------------------------- |
 | `advertisement.adsense` | _Not set_ | Your Google AdSense Publisher ID (e.g. `ca-pub-1234567890abcdef`). Set this parameter to enable AdSense ads on your site. |
 
 ## Other configuration files

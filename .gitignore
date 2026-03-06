@@ -7,6 +7,9 @@ uv.lock
 settings.toml
 pyproject.toml
 
+
+node_modules/
+
 # Generated files
 public/
 resources/_gen/

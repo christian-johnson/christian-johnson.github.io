@@ -9,7 +9,7 @@ series: ["部署教程"]
 series_order: 4
 ---
 
-Blowfish 适宜个高度定制化的主题，使用到了一些 Hugo 中最新的特性来简化配置方式。
+Blowfish 是一个高度定制化的主题，使用到了一些 Hugo 中最新的特性来简化配置方式。
 
 主题附带了默认配置，可以让你快速启动一个基本的博客或静态网站。
 
@@ -137,15 +137,16 @@ Blowfish 主题目前默认支持了以下语言：
 
 #### 作者
 
-| 名称 | 默认值 | 描述 |
-| --- | --- | --- |
-| `params.author.name` | 无 | 作者名。此参数将展示在文章页脚。并且如果主页使用了个人资料布局，也会展示此值。 |
-| `params.author.email` | 无 | 作者邮箱。如果启用了“通过邮件回复”功能，则会启用此值。 |
-| `params.author.image` | 无 | 作者头像的文件路径。图像应该是 1:1 的宽高比。可以放在网站的 `assets/` 文件夹中，也可以是外部 URL。 |
-| `params.author.imageQuality` | `96` | 作者的头像将被视为“高质量”图像，以最小化首页上的瑕疵。值的范围是 1-100。 |
-| `params.author.headline` | 无 | 包含作者头衔的 Markdown。它将展示在主页中作者姓名打分下方。 |
-| `params.author.bio` | 无 | 包含作者简介的 Markdown。它将展示在文章页脚。 |
-| `params.author.links` | 无 | 与作者详细信息一起显示的链接。配置文件中包含示例链接，取消注释即可启用。链接展示的顺序由他们在数组中定义的顺序决定。如果你想自定义链接，可以在 `assets/icons/` 中提供相应的SVG图片。 |
+| 名称                         | 默认值 | 描述                                                                                                                                                                                 |
+| ---------------------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `params.author.name`         | 无     | 作者名。此参数将展示在文章页脚。并且如果主页使用了个人资料布局，也会展示此值。                                                                                                       |
+| `params.author.email`        | 无     | 作者邮箱。如果启用了“通过邮件回复”功能，则会启用此值。                                                                                                                               |
+| `params.author.image`        | 无     | 作者头像的文件路径。图像应该是 1:1 的宽高比。可以放在网站的 `assets/` 文件夹中，也可以是外部 URL。                                                                                   |
+| `params.author.imageQuality` | `96`   | 作者的头像将被视为“高质量”图像，以最小化首页上的瑕疵。值的范围是 1-100。                                                                                                             |
+| `params.author.headline`     | 无     | 包含作者头衔的 Markdown。它将展示在主页中作者姓名打分下方。                                                                                                                          |
+| `params.author.bio`          | 无     | 包含作者简介的 Markdown。它将展示在文章页脚。                                                                                                                                        |
+| `params.author.links`        | 无     | 与作者详细信息一起显示的链接。配置文件中包含示例链接，取消注释即可启用。链接展示的顺序由他们在数组中定义的顺序决定。如果你想自定义链接，可以在 `assets/icons/` 中提供相应的SVG图片。 |
+
 <!-- prettier-ignore-end -->
 
 ### 菜单
@@ -262,6 +263,7 @@ Blowfish 提供了大量控制主题功能的配置参数，下面的表格中�
 | `article.showComments` | `false` | 是否在文章末尾添加 [评论部分]({{< ref "partials#comments" >}})。 |
 | `article.sharingLinks` | _无_ | 在文章末尾显示的分享链接。如果没有提供或设置为 `false`，则不会显示任何分享链接。可用的值包括："bluesky"、"email"、"facebook"、"line"、"linkedin"、"mastodon"、"pinterest"、"reddit"、"telegram"、"twitter"和"whatsapp" |
 | `article.showZenMode` | `false` | 指定是否激活文章阅读的禅模式，即隐藏常规的界面元素。 |
+| `article.externalLinkForceNewTab` | `true` | 是否强制 Markdown 中的外部链接在新标签页中打开。 |
 
 ### 列表页
 
@@ -376,16 +378,16 @@ Blowfish 提供了大量控制主题功能的配置参数，下面的表格中�
 
 ### RSSNext
 
-| 名称 | 默认值 | 描述 |
-| --- | --- | --- |
-| `rssnext.feedId` | _无_ | [RSSNext/Follow](https://follow.is) 提供的 `feeId`，这将被自动添加在 `rss.xml` 中以便完成订阅源所有权验证，证明该源属于你自己。 |
-| `rssnext.userId` | _无_ | [RSSNext/Follow](https://follow.is) 提供的 `userId`，这将被自动添加在 `rss.xml` 中以便完成订阅源所有权验证，证明该源属于你自己 |
+| 名称             | 默认值 | 描述                                                                                                                            |
+| ---------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------- |
+| `rssnext.feedId` | _无_   | [RSSNext/Follow](https://follow.is) 提供的 `feeId`，这将被自动添加在 `rss.xml` 中以便完成订阅源所有权验证，证明该源属于你自己。 |
+| `rssnext.userId` | _无_   | [RSSNext/Follow](https://follow.is) 提供的 `userId`，这将被自动添加在 `rss.xml` 中以便完成订阅源所有权验证，证明该源属于你自己  |
 
 ### Advertisement
 
-| 名称                     | 默认值   | 描述 |
-| ------------------------ | --------- |-------------|
-| `advertisement.adsense` | _无_ | 您的 Google AdSense 发布商 ID (例如 `ca-pub-1234567890abcdef`)。设置此参数可在您的网站上启用 AdSense 广告。 |
+| 名称                    | 默认值 | 描述                                                                                                        |
+| ----------------------- | ------ | ----------------------------------------------------------------------------------------------------------- |
+| `advertisement.adsense` | _无_   | 您的 Google AdSense 发布商 ID (例如 `ca-pub-1234567890abcdef`)。设置此参数可在您的网站上启用 AdSense 广告。 |
 
 ## 其他配置文件
 

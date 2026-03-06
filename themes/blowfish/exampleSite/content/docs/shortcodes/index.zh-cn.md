@@ -11,7 +11,7 @@ series_order: 8
 
 除了所有[默认 Hugo 简码](https://gohugo.io/content-management/shortcodes/) 之外，Blowfish 还添加了一些额外的功能。
 
-## Alert
+## 醒目框
 
 `alert` 可以将其中内容输出为文章中的风格化消息框。它对于吸引读者注意您不想让读者错过的重要信息很有用。
 
@@ -64,7 +64,7 @@ This is an error!
 
 <br/><br/><br/>
 
-## Admonition
+## 提示框
 
 Admonition 用于在内容中插入醒目提示。
 
@@ -76,7 +76,7 @@ Admonition 的用途与 alert shortcode 类似，但其实现方式是通过 Hug
 
 > [!TIP]+ 自定义标题
 > 一个带有自定义标题的可折叠提示块。
-{icon="twitter"}
+> {icon="twitter"}
 ```
 
 > [!TIP]
@@ -84,7 +84,7 @@ Admonition 的用途与 alert shortcode 类似，但其实现方式是通过 Hug
 
 > [!TIP]+ 自定义标题
 > 一个带有自定义标题的可折叠提示块。
-{icon="twitter"}
+> {icon="twitter"}
 
 提示符号（`+` 或 `-`）是可选的，用于控制提示块是否默认折叠。请注意，该提示符号仅在 Obsidian 中兼容。
 
@@ -99,9 +99,9 @@ Admonition 的用途与 alert shortcode 类似，但其实现方式是通过 Hug
 
 <br/><br/><br/>
 
-## Article
+## 文章嵌入
 
-`Article` 将把一篇文章嵌入到一个 markdown 文件中。 参数中的 `link`应该是要嵌入的文件的 `.RelPermalink`。请注意，如果简码引用其父级文件，则它不会显示任何内容。 *注意：如果您在 Blowfish（即 /blowfish/）等子文件夹中运行网站，请在链接中包含该路径。*
+`Article` 将把一篇文章嵌入到一个 markdown 文件中。 参数中的 `link`应该是要嵌入的文件的 `.RelPermalink`。请注意，如果简码引用其父级文件，则它不会显示任何内容。 _注意：如果您在 Blowfish（即 /blowfish/）等子文件夹中运行网站，请在链接中包含该路径。_
 
 <!-- prettier-ignore-start -->
 | 参数   | 功能                                  |
@@ -121,7 +121,7 @@ Admonition 的用途与 alert shortcode 类似，但其实现方式是通过 Hug
 
 <br/><br/><br/>
 
-## Badge
+## 徽章
 
 `badge` 输出一个美观的徽章组件，该组件对于显示元数据很有用。
 
@@ -139,7 +139,7 @@ New article!
 
 <br/><br/><br/>
 
-## Button
+## 按钮
 
 `button` 输出一个样式化的按钮组件，可用于突出显示主要操作。它有三个可选变量 `href`、`target` 和 `rel`，可用于指定链接的 URL、目标和关系。
 
@@ -157,7 +157,7 @@ Call to action
 
 <br/><br/><br/>
 
-## Carousel
+## 滑动画册
 
 `carousel` 用于生成可交互且具有视觉吸引力的方式展示多个图像的画廊。这允许用户滑动浏览多个图像，同时仅占用单个图像的垂直空间。 所有图像均使用父组件的完整宽度并使用预定义的宽高比 `16:9` 、 `21:9` 或 `32:9` 之一显示。
 
@@ -187,7 +187,7 @@ Call to action
 
 <br/><br/><br/>
 
-## Chart
+## 图表
 
 `chart` 使用 Chart.js 库将图表嵌入到使用简单结构化数据的文章中。它支持多种[不同的图表样式](https://www.chartjs.org/docs/latest/samples/)，并且所有内容都可以在简码中进行配置。只需在简码中提供图表参数，Chart.js 将完成剩下的工作。
 
@@ -225,7 +225,7 @@ data: {
 
 <br/><br/><br/>
 
-## Code Importer
+## 导入源码
 
 此短代码用于轻松从外部源导入代码，无需复制和粘贴
 
@@ -240,23 +240,19 @@ data: {
 
 <!-- prettier-ignore-end -->
 
-
 **Example:**
 
 ```md
 {{</* codeimporter url="https://raw.githubusercontent.com/nunocoracao/blowfish/main/layouts/shortcodes/mdimporter.html" type="go" */>}}
-
 ```
 
 {{< codeimporter url="https://raw.githubusercontent.com/nunocoracao/blowfish/main/layouts/shortcodes/mdimporter.html" type="go" >}}
 
 ```md
 {{</* codeimporter url="https://raw.githubusercontent.com/nunocoracao/blowfish/main/config/_default/hugo.toml" type="toml" startLine="11" endLine="18" */>}}
-
 ```
 
 {{< codeimporter url="https://raw.githubusercontent.com/nunocoracao/blowfish/main/config/_default/hugo.toml" type="toml" startLine="11" endLine="18">}}
-
 
 <br/><br/>
 
@@ -275,6 +271,7 @@ data: {
 ```md
 {{</* codeberg repo="forgejo/forgejo" */>}}
 ```
+
 {{< codeberg repo="forgejo/forgejo" >}}
 
 <br/><br/><br/>
@@ -306,7 +303,7 @@ Blowfish 还支持使用标准 Markdown 语法自动转换图像。只需使用�
 ![Alt text](image.jpg "Image caption")
 ```
 
-## Forgejo Card
+## Forgejo 卡片
 
 `forgejo` allows you to quickly link a Forgejo repository via the forgejo API, providing real-time updates on stats such as stars and forks.
 
@@ -322,10 +319,10 @@ Blowfish 还支持使用标准 Markdown 语法自动转换图像。只需使用�
 ```md
 {{</* forgejo server="https://v11.next.forgejo.org" repo="a/mastodon" */>}}
 ```
+
 {{< forgejo server="https://v11.next.forgejo.org" repo="a/mastodon" >}}
 
 <br/><br/><br/>
-
 
 **例如：**
 
@@ -345,7 +342,7 @@ Blowfish 还支持使用标准 Markdown 语法自动转换图像。只需使用�
 
 <br/><br/><br/>
 
-## Gallery
+## 排布画册
 
 `gallery` 允许您以响应式一次展示多个图像，并具有更加多样化和有趣的布局的图库。
 
@@ -355,51 +352,50 @@ Blowfish 还支持使用标准 Markdown 语法自动转换图像。只需使用�
 
 ```md
 {{</* gallery */>}}
-  <img src="gallery/01.jpg" class="grid-w33" />
-  <img src="gallery/02.jpg" class="grid-w33" />
-  <img src="gallery/03.jpg" class="grid-w33" />
-  <img src="gallery/04.jpg" class="grid-w33" />
-  <img src="gallery/05.jpg" class="grid-w33" />
-  <img src="gallery/06.jpg" class="grid-w33" />
-  <img src="gallery/07.jpg" class="grid-w33" />
+<img src="gallery/01.jpg" class="grid-w33" />
+<img src="gallery/02.jpg" class="grid-w33" />
+<img src="gallery/03.jpg" class="grid-w33" />
+<img src="gallery/04.jpg" class="grid-w33" />
+<img src="gallery/05.jpg" class="grid-w33" />
+<img src="gallery/06.jpg" class="grid-w33" />
+<img src="gallery/07.jpg" class="grid-w33" />
 {{</* /gallery */>}}
 ```
 
 {{< gallery >}}
-  <img src="gallery/01.jpg" class="grid-w33" />
-  <img src="gallery/02.jpg" class="grid-w33" />
-  <img src="gallery/03.jpg" class="grid-w33" />
-  <img src="gallery/04.jpg" class="grid-w33" />
-  <img src="gallery/05.jpg" class="grid-w33" />
-  <img src="gallery/06.jpg" class="grid-w33" />
-  <img src="gallery/07.jpg" class="grid-w33" />
+<img src="gallery/01.jpg" class="grid-w33" />
+<img src="gallery/02.jpg" class="grid-w33" />
+<img src="gallery/03.jpg" class="grid-w33" />
+<img src="gallery/04.jpg" class="grid-w33" />
+<img src="gallery/05.jpg" class="grid-w33" />
+<img src="gallery/06.jpg" class="grid-w33" />
+<img src="gallery/07.jpg" class="grid-w33" />
 {{< /gallery >}}
 
 <br/><br/><br/>
-
 
 **例2: 响应式图库**
 
 ```md
 {{</* gallery */>}}
-  <img src="gallery/01.jpg" class="grid-w50 md:grid-w33 xl:grid-w25" />
-  <img src="gallery/02.jpg" class="grid-w50 md:grid-w33 xl:grid-w25" />
-  <img src="gallery/03.jpg" class="grid-w50 md:grid-w33 xl:grid-w25" />
-  <img src="gallery/04.jpg" class="grid-w50 md:grid-w33 xl:grid-w25" />
-  <img src="gallery/05.jpg" class="grid-w50 md:grid-w33 xl:grid-w25" />
-  <img src="gallery/06.jpg" class="grid-w50 md:grid-w33 xl:grid-w25" />
-  <img src="gallery/07.jpg" class="grid-w50 md:grid-w33 xl:grid-w25" />
+<img src="gallery/01.jpg" class="grid-w50 md:grid-w33 xl:grid-w25" />
+<img src="gallery/02.jpg" class="grid-w50 md:grid-w33 xl:grid-w25" />
+<img src="gallery/03.jpg" class="grid-w50 md:grid-w33 xl:grid-w25" />
+<img src="gallery/04.jpg" class="grid-w50 md:grid-w33 xl:grid-w25" />
+<img src="gallery/05.jpg" class="grid-w50 md:grid-w33 xl:grid-w25" />
+<img src="gallery/06.jpg" class="grid-w50 md:grid-w33 xl:grid-w25" />
+<img src="gallery/07.jpg" class="grid-w50 md:grid-w33 xl:grid-w25" />
 {{</* /gallery */>}}
 ```
 
 {{< gallery >}}
-  <img src="gallery/01.jpg" class="grid-w50 md:grid-w33 xl:grid-w25" />
-  <img src="gallery/02.jpg" class="grid-w50 md:grid-w33 xl:grid-w25" />
-  <img src="gallery/03.jpg" class="grid-w50 md:grid-w33 xl:grid-w25" />
-  <img src="gallery/04.jpg" class="grid-w50 md:grid-w33 xl:grid-w25" />
-  <img src="gallery/05.jpg" class="grid-w50 md:grid-w33 xl:grid-w25" />
-  <img src="gallery/06.jpg" class="grid-w50 md:grid-w33 xl:grid-w25" />
-  <img src="gallery/07.jpg" class="grid-w50 md:grid-w33 xl:grid-w25" />
+<img src="gallery/01.jpg" class="grid-w50 md:grid-w33 xl:grid-w25" />
+<img src="gallery/02.jpg" class="grid-w50 md:grid-w33 xl:grid-w25" />
+<img src="gallery/03.jpg" class="grid-w50 md:grid-w33 xl:grid-w25" />
+<img src="gallery/04.jpg" class="grid-w50 md:grid-w33 xl:grid-w25" />
+<img src="gallery/05.jpg" class="grid-w50 md:grid-w33 xl:grid-w25" />
+<img src="gallery/06.jpg" class="grid-w50 md:grid-w33 xl:grid-w25" />
+<img src="gallery/07.jpg" class="grid-w50 md:grid-w33 xl:grid-w25" />
 {{< /gallery >}}
 
 <br/><br/><br/>
@@ -408,10 +404,10 @@ Blowfish 还支持使用标准 Markdown 语法自动转换图像。只需使用�
 
 `gist` 短代码允许你通过指定 Gist 用户名、ID 以及可选的特定文件，直接将 GitHub Gist 嵌入到内容中。
 
-| 参数        | 描述                       |
-| --------- | ------------------------ |
-| `[0]`     | \[字符串] GitHub 用户名        |
-| `[1]`     | \[字符串] Gist ID           |
+| 参数          | 描述                                    |
+| ------------- | --------------------------------------- |
+| `[0]`         | \[字符串] GitHub 用户名                 |
+| `[1]`         | \[字符串] Gist ID                       |
 | `[2]`（可选） | \[字符串] Gist 中要嵌入的文件名（可选） |
 
 **示例 1：嵌入整个 Gist**
@@ -431,7 +427,6 @@ Blowfish 还支持使用标准 Markdown 语法自动转换图像。只需使用�
 {{< gist "rauchg" "2052694" "README.md" >}}
 
 <br/><br/><br/>
-
 
 ## Gitea 卡片
 
@@ -503,10 +498,10 @@ Blowfish 还支持使用标准 Markdown 语法自动转换图像。只需使用�
 
 `huggingface` 让您能够快速链接 Hugging Face 模型或数据集，显示实时信息如点赞数和下载量，以及类型和描述。
 
-| 参数      | 描述                                                         |
-|-----------|--------------------------------------------------------------|
-| `model`   | [字符串] 格式为 `用户名/模型名` 的 Hugging Face 模型         |
-| `dataset` | [字符串] 格式为 `用户名/数据集名` 的 Hugging Face 数据集     |
+| 参数      | 描述                                                     |
+| --------- | -------------------------------------------------------- |
+| `model`   | [字符串] 格式为 `用户名/模型名` 的 Hugging Face 模型     |
+| `dataset` | [字符串] 格式为 `用户名/数据集名` 的 Hugging Face 数据集 |
 
 **注意：** 使用 `model` 或 `dataset` 参数中的一个，不要同时使用。
 
@@ -570,12 +565,9 @@ Blowfish 还支持使用标准 Markdown 语法自动转换图像。只需使用�
 
 <br/><br/><br/>
 
-
 ## 重点突出
 
-
 `keyword` 组件可用于在视觉上突出显示某些重要的单词或短语，例如专业技能等。 `keywordList` 简码可用于将多个 `keyword` 组合在一起。每个组件可以具有以下参数。
-
 
 <!-- prettier-ignore-start -->
 | 参数   | 功能                        |
@@ -591,7 +583,7 @@ Blowfish 还支持使用标准 Markdown 语法自动转换图像。只需使用�
 {{</* keyword */>}} Super skill {{</* /keyword */>}}
 ```
 
-{{< keyword >}} *Standalone* skill {{< /keyword >}}
+{{< keyword >}} _Standalone_ skill {{< /keyword >}}
 
 **例2 :**
 
@@ -601,18 +593,18 @@ Blowfish 还支持使用标准 Markdown 语法自动转换图像。只需使用�
 {{</* keyword icon="code" */>}} **Important** skill {{</* /keyword */>}}
 {{</* /keywordList */>}}
 
-{{</* keyword */>}} *Standalone* skill {{</* /keyword */>}}
+{{</* keyword */>}} _Standalone_ skill {{</* /keyword */>}}
 ```
 
 {{< keywordList >}}
 {{< keyword icon="github" >}} Lorem ipsum dolor {{< /keyword >}}
 {{< keyword icon="code" >}} **Important** skill {{< /keyword >}}
 {{< /keywordList >}}
-{{< keyword >}} *Standalone* skill {{< /keyword >}}
+{{< keyword >}} _Standalone_ skill {{< /keyword >}}
 
 <br/><br/><br/>
 
-## Lead
+## 开篇语
 
 `lead` 用于强调文章的开头。它可以用来设计介绍的样式，或者指出一条重要的信息。只需将任何 Markdown 内容包装在 `lead` 简码中即可。
 
@@ -628,7 +620,7 @@ When life gives you lemons, make lemonade.
 When life gives you lemons, make lemonade.
 {{< /lead >}}
 
-<br/><br/><br/> 
+<br/><br/><br/>
 
 ## 列表
 
@@ -667,7 +659,7 @@ When life gives you lemons, make lemonade.
 
 <br/><br/><br/>
 
-## 文字书写方向 
+## 文字书写方向
 
 `ltr` 和 `rtl` 允许您混排内容。许多从左往右书写语言的用户希望在文章中包含部分从右往左的书写内容。使用此简码可以让您做到这一点，并利用 `%` 作为简码中最外层的标识符 [Hugo Shortcodes](https://gohugo.io/content-management/shortcodes/#shortcodes-with-markdown)，其中任何 markdown 内容都会正常渲染。
 
@@ -676,18 +668,18 @@ When life gives you lemons, make lemonade.
 ```md
 - This is an markdown list.
 - Its per default a LTR direction
-{{%/* rtl */%}}
+  {{%/* rtl */%}}
 - هذه القائمة باللغة العربية
 - من اليمين الى اليسار
-{{%/* /rtl */%}}
+  {{%/* /rtl */%}}
 ```
 
 - This is an markdown list.
 - Its per default a LTR direction
-{{% rtl %}}
+  {{% rtl %}}
 - هذه القائمة باللغة العربية
 - من اليمين الى اليسار
-{{% /rtl %}}
+  {{% /rtl %}}
 
 <br/><br/><br/>
 
@@ -703,16 +695,13 @@ When life gives you lemons, make lemonade.
 
 <!-- prettier-ignore-end -->
 
-
 **例如：**
 
 ```md
 {{</* mdimporter url="https://raw.githubusercontent.com/nunocoracao/nunocoracao/master/README.md" */>}}
-
 ```
 
 {{< mdimporter url="https://raw.githubusercontent.com/nunocoracao/nunocoracao/master/README.md" >}}
-
 
 <br/><br/>
 
@@ -763,7 +752,14 @@ B-->C[Profit]
 
 `tabs` 简码常用于呈现某个步骤的不同变体。例如，可用于展示在不同平台上安装 VS Code 的方式。
 
-**示例**
+| 参数      | 描述                                                                      |
+| --------- | ------------------------------------------------------------------------- |
+| `group`   | **可选。** 用于同步切换标签页的组名。具有相同组名的所有标签页将一起切换。 |
+| `default` | **可选。** 默认激活的标签页的标签。如果未设置，默认激活第一个标签页。     |
+| `label`   | **必填。** 显示在标签按钮上的文本标签。                                   |
+| `icon`    | **可选。** 在标签前显示的图标名称。                                       |
+
+**示例 1：基本用法**
 
 ````md
 {{</* tabs */>}}
@@ -825,6 +821,98 @@ B-->C[Profit]
 
 {{< /tabs >}}
 
+**示例 2：使用 Group、Default 和 Icon**
+
+````md
+{{</* tabs group="lang" default="Python" */>}}
+{{</* tab label="JavaScript" icon="code" */>}}
+`javascript
+    console.log("Hello");
+    `
+{{</* /tab */>}}
+
+    {{</* tab label="Python" icon="sun" */>}}
+    ```python
+    print("Hello")
+    ```
+    {{</* /tab */>}}
+
+    {{</* tab label="Go" icon="moon" */>}}
+    ```go
+    fmt.Println("Hello")
+    ```
+    {{</* /tab */>}}
+
+{{</* /tabs */>}}
+
+{{</* tabs group="lang" default="Python" */>}}
+{{</* tab label="JavaScript" icon="code" */>}}
+`javascript
+    const add = (a, b) => a + b;
+    `
+{{</* /tab */>}}
+
+    {{</* tab label="Python" icon="sun" */>}}
+    ```python
+    def add(a, b): return a + b
+    ```
+    {{</* /tab */>}}
+
+    {{</* tab label="Go" icon="moon" */>}}
+    ```go
+    func add(a, b int) int { return a + b }
+    ```
+    {{</* /tab */>}}
+
+{{</* /tabs */>}}
+````
+
+**Output**
+
+{{< tabs group="lang" default="Python" >}}
+{{< tab label="JavaScript" icon="code" >}}
+`javascript
+    console.log("Hello");
+    `
+{{< /tab >}}
+
+    {{< tab label="Python" icon="sun" >}}
+    ```python
+    print("Hello")
+    ```
+    {{< /tab >}}
+
+    {{< tab label="Go" icon="moon" >}}
+    ```go
+    fmt.Println("Hello")
+    ```
+    {{< /tab >}}
+
+{{< /tabs >}}
+
+{{< tabs group="lang" default="Python" >}}
+{{< tab label="JavaScript" icon="code" >}}
+`javascript
+    const add = (a, b) => a + b;
+    `
+{{< /tab >}}
+
+    {{< tab label="Python" icon="sun" >}}
+    ```python
+    def add(a, b): return a + b
+    ```
+    {{< /tab >}}
+
+    {{< tab label="Go" icon="moon" >}}
+    ```go
+    func add(a, b int) int { return a + b }
+    ```
+    {{< /tab >}}
+
+{{< /tabs >}}
+
+在这个示例中，两个标签组都使用了相同的 `group="lang"` 参数，因此点击任意一个标签时，两个标签组都会同步切换。`default="Python"` 参数用于指定 Python 为初始激活的标签，而 `icon="code"` 会在每个标签标题前添加一个图标。
+
 <br/><br/><br/>
 
 ## 时间线
@@ -848,12 +936,12 @@ B-->C[Profit]
 {{</* timeline */>}}
 
 {{</* timelineItem icon="github" header="header" badge="badge test" subheader="subheader" */>}}
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non magna ex. Donec sollicitudin ut lorem quis lobortis. Nam ac ipsum libero. Sed a ex eget ipsum tincidunt venenatis quis sed nisl. Pellentesque sed urna vel odio consequat tincidunt id ut purus. Nam sollicitudin est sed dui interdum rhoncus. 
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non magna ex. Donec sollicitudin ut lorem quis lobortis. Nam ac ipsum libero. Sed a ex eget ipsum tincidunt venenatis quis sed nisl. Pellentesque sed urna vel odio consequat tincidunt id ut purus. Nam sollicitudin est sed dui interdum rhoncus.
 {{</* /timelineItem */>}}
-
 
 {{</* timelineItem icon="code" header="Another Awesome Header" badge="date - present" subheader="Awesome Subheader" */>}}
 With html code
+
 <ul>
   <li>Coffee</li>
   <li>Tea</li>
@@ -864,13 +952,13 @@ With html code
 {{</* timelineItem icon="star" header="Shortcodes" badge="AWESOME" */>}}
 With other shortcodes
 {{</* gallery */>}}
-  <img src="gallery/01.jpg" class="grid-w33" />
-  <img src="gallery/02.jpg" class="grid-w33" />
-  <img src="gallery/03.jpg" class="grid-w33" />
-  <img src="gallery/04.jpg" class="grid-w33" />
-  <img src="gallery/05.jpg" class="grid-w33" />
-  <img src="gallery/06.jpg" class="grid-w33" />
-  <img src="gallery/07.jpg" class="grid-w33" />
+<img src="gallery/01.jpg" class="grid-w33" />
+<img src="gallery/02.jpg" class="grid-w33" />
+<img src="gallery/03.jpg" class="grid-w33" />
+<img src="gallery/04.jpg" class="grid-w33" />
+<img src="gallery/05.jpg" class="grid-w33" />
+<img src="gallery/06.jpg" class="grid-w33" />
+<img src="gallery/07.jpg" class="grid-w33" />
 {{</* /gallery */>}}
 {{</* /timelineItem */>}}
 
@@ -881,16 +969,15 @@ With other shortcodes
 {{</* /timeline */>}}
 ```
 
-
 {{< timeline >}}
 
 {{< timelineItem icon="github" header="header" badge="badge test" subheader="subheader" >}}
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non magna ex. Donec sollicitudin ut lorem quis lobortis. Nam ac ipsum libero. Sed a ex eget ipsum tincidunt venenatis quis sed nisl. Pellentesque sed urna vel odio consequat tincidunt id ut purus. Nam sollicitudin est sed dui interdum rhoncus. 
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non magna ex. Donec sollicitudin ut lorem quis lobortis. Nam ac ipsum libero. Sed a ex eget ipsum tincidunt venenatis quis sed nisl. Pellentesque sed urna vel odio consequat tincidunt id ut purus. Nam sollicitudin est sed dui interdum rhoncus.
 {{< /timelineItem >}}
-
 
 {{< timelineItem icon="code" header="Another Awesome Header" badge="date - present" subheader="Awesome Subheader" >}}
 With html code
+
 <ul>
   <li>Coffee</li>
   <li>Tea</li>
@@ -901,13 +988,13 @@ With html code
 {{< timelineItem icon="star" header="Shortcodes" badge="AWESOME" >}}
 With other shortcodes
 {{< gallery >}}
-  <img src="gallery/01.jpg" class="grid-w33" />
-  <img src="gallery/02.jpg" class="grid-w33" />
-  <img src="gallery/03.jpg" class="grid-w33" />
-  <img src="gallery/04.jpg" class="grid-w33" />
-  <img src="gallery/05.jpg" class="grid-w33" />
-  <img src="gallery/06.jpg" class="grid-w33" />
-  <img src="gallery/07.jpg" class="grid-w33" />
+<img src="gallery/01.jpg" class="grid-w33" />
+<img src="gallery/02.jpg" class="grid-w33" />
+<img src="gallery/03.jpg" class="grid-w33" />
+<img src="gallery/04.jpg" class="grid-w33" />
+<img src="gallery/05.jpg" class="grid-w33" />
+<img src="gallery/06.jpg" class="grid-w33" />
+<img src="gallery/07.jpg" class="grid-w33" />
 {{< /gallery >}}
 {{< /timelineItem >}}
 
@@ -916,7 +1003,6 @@ With other shortcodes
 {{< /timelineItem >}}
 
 {{< /timeline >}}
-
 
 <br/><br/><br/>
 
@@ -945,7 +1031,7 @@ Blowfish 使用简码实现 TypeIt 功能的子集。在 `typeit` 简码中编�
 
 ```md
 {{</* typeit */>}}
-Lorem ipsum dolor sit amet 
+Lorem ipsum dolor sit amet
 {{</* /typeit */>}}
 ```
 
@@ -956,48 +1042,49 @@ Lorem ipsum dolor sit amet
 **例2:**
 
 ```md
-{{</* typeit 
+{{</* typeit
   tag=h1
   lifeLike=true
 */>}}
-Lorem ipsum dolor sit amet, 
-consectetur adipiscing elit. 
+Lorem ipsum dolor sit amet,
+consectetur adipiscing elit.
 {{</* /typeit */>}}
 ```
 
 {{< typeit
-  tag=h1
-  lifeLike=true
->}}
-Lorem ipsum dolor sit amet,
-consectetur adipiscing elit.
-{{< /typeit >}}
+tag=h1
+lifeLike=true
+
+> }}
+> Lorem ipsum dolor sit amet,
+> consectetur adipiscing elit.
+> {{< /typeit >}}
 
 **例3:**
 
 ```md
-{{</* typeit 
+{{</* typeit
   tag=h3
   speed=50
   breakLines=false
   loop=true
 */>}}
-Lorem ipsum dolor sit amet, 
-consectetur adipiscing elit. 
+Lorem ipsum dolor sit amet,
+consectetur adipiscing elit.
 {{</* /typeit */>}}
 ```
 
 {{< typeit
-  tag=h3
-  speed=50
-  breakLines=false
-  loop=true
->}}
-"Frankly, my dear, I don't give a damn." Gone with the Wind (1939)
-"I'm gonna make him an offer he can't refuse." The Godfather (1972)
-"Toto, I've a feeling we're not in Kansas anymore." The Wizard of Oz (1939)
-{{< /typeit >}}
+tag=h3
+speed=50
+breakLines=false
+loop=true
 
+> }}
+> "Frankly, my dear, I don't give a damn." Gone with the Wind (1939)
+> "I'm gonna make him an offer he can't refuse." The Godfather (1972)
+> "Toto, I've a feeling we're not in Kansas anymore." The Wizard of Oz (1939)
+> {{< /typeit >}}
 
 <br/><br/><br/>
 
@@ -1040,12 +1127,13 @@ Blowfish 提供 `video` 简码，用于在内容中嵌入本地或外部视频�
 ```
 
 {{< video
-  src="https://upload.wikimedia.org/wikipedia/commons/5/5a/CC0_-_Public_Domain_Dedication_video_bumper.webm"
-  poster="https://upload.wikimedia.org/wikipedia/commons/e/e0/CC0.jpg"
-  caption="**公有领域演示** — CC0 视频与封面。"
-  loop=true
-  muted=true
->}}
+src="https://upload.wikimedia.org/wikipedia/commons/5/5a/CC0_-_Public_Domain_Dedication_video_bumper.webm"
+poster="https://upload.wikimedia.org/wikipedia/commons/e/e0/CC0.jpg"
+caption="**公有领域演示** — CC0 视频与封面。"
+loop=true
+muted=true
+
+> }}
 
 <br/><br/><br/>
 
@@ -1064,7 +1152,6 @@ Blowfish 提供 `video` 简码，用于在内容中嵌入本地或外部视频�
 
 ```md
 {{</* youtubeLite id="SgXhGb-7QbU" label="Blowfish-tools demo" */>}}
-
 ```
 
 {{< youtubeLite id="SgXhGb-7QbU" label="Blowfish-tools demo" >}}

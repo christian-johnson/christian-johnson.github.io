@@ -14,7 +14,7 @@ Para poder suportar dados dinâmicos em seu site, adicionamos suporte para integ
 1. Vá para o <a target="_blank" href="https://firebase.com">site do Firebase</a> e crie uma conta gratuitamente
 2. Crie um novo projeto
 3. Selecione a localização do analytics
-4. Configure o Firebase no Blowfish obtendo as variáveis do seu projeto e configurando-as no arquivo `params.toml`. Mais detalhes podem ser encontrados <a target="_blank" href="{{< ref "configuration/#theme-parameters" >}}">nesta página</a>. Você pode encontrar um exemplo do arquivo que o Firebase fornecerá abaixo, observe os parâmetros dentro do objeto FirebaseConfig.
+4. Configure o Firebase no Blowfish obtendo as variáveis do seu projeto e configurando-as no arquivo `params.toml`. Mais detalhes podem ser encontrados <a target="\_blank" href="{{< ref "configuration/#theme-parameters" >}}">nesta página</a>. Você pode encontrar um exemplo do arquivo que o Firebase fornecerá abaixo, observe os parâmetros dentro do objeto FirebaseConfig.
 
 ```js
 // Import the functions you need from the SDKs you need
@@ -32,7 +32,7 @@ const firebaseConfig = {
   storageBucket: "blowfish-21fff.appspot.com",
   messagingSenderId: "60108104191",
   appId: "1:60108104191:web:039842ebe1370698b487ca",
-  measurementId: "G-PEDMYR1V0K"
+  measurementId: "G-PEDMYR1V0K",
 };
 
 // Initialize Firebase
@@ -40,16 +40,43 @@ const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 ```
 
-5. Configurar Firestore - Selecione Build e abra Firestore. Crie um novo banco de dados e escolha iniciar no modo produção. Selecione a localização do servidor e aguarde. Uma vez iniciado, você precisa configurar as regras. Basta copiar e colar o arquivo abaixo e pressionar publicar.
+5. Configurar Firestore - Selecione Build e abra Firestore. Crie um novo banco de dados e escolha iniciar no modo produção. Selecione a localização do servidor e aguarde. Uma vez iniciado, você precisa configurar as regras. Basta copiar e colar o arquivo abaixo e pressionar publicar. Essas regras garantem que as visualizações só podem ser incrementadas em 1, e as curtidas só podem ser alteradas em +1 ou -1 (e nunca abaixo de 0).
+
 ```txt
 rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
+    // Views - read anyone, only increment by 1
+    match /views/{document} {
+      allow read: if request.auth != null;
+      allow create: if request.auth != null
+                    && request.resource.data.keys().hasOnly(['views'])
+                    && request.resource.data.views == 1;
+      allow update: if request.auth != null
+                    && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['views'])
+                    && request.resource.data.views == resource.data.views + 1;
+    }
+
+    // Likes - read anyone, only +1 or -1
+    match /likes/{document} {
+      allow read: if request.auth != null;
+      allow create: if request.auth != null
+                    && request.resource.data.keys().hasOnly(['likes'])
+                    && request.resource.data.likes == 1;
+      allow update: if request.auth != null
+                    && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['likes'])
+                    && (request.resource.data.likes == resource.data.likes + 1
+                        || request.resource.data.likes == resource.data.likes - 1)
+                    && request.resource.data.likes >= 0;
+    }
+
+    // Deny everything else
     match /{document=**} {
-      allow read, write: if request.auth != null;
+      allow read, write: if false;
     }
   }
 }
 ```
+
 6. Habilitar autorização anônima - Selecione Build e abra Authentication. Selecione começar, clique em Anônimo e ative, salve.
 7. Aproveite - agora você pode ativar visualizações e curtidas no Blowfish para todos (ou específicos) artigos.
