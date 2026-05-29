@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Sakharov: a vibe-coded text editor with notebook support
+title: Sakharov, a vibe-coded text editor with notebook support
 date: 2026-05-29
 description: A project to build a personal text editor with all my favorite features.
 ---
