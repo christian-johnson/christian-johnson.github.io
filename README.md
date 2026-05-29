@@ -6,3 +6,4 @@ This is the repo for my personal site.
 
 - New posts should be placed in the `content/posts/` directory, following the pattern of the other posts.
 - New publications should be added to the BibTeX file located at `assets/bib/papers.bib`; then, the script `scripts/bib2json.py` should be run to generate a formatted JSON file for display.
+- Ensure you have `pre-commit` and `c2patool` installed, in order to provide provenance information on media that is put in the blog.
