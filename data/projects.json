@@ -20,5 +20,16 @@
         "description": "A quasi-real-time detector of locations on the Earth that are antipodal and have matching temperature and barometric pressure, using data from the GFS."
       }
     ]
+  },
+  {
+    "items": [
+      {
+        "title": "sakharov",
+        "image": "img/sakharov-screenshot.png",
+        "url": "https://github.com/christian-johnson/sakharoy",
+        "repo": "https://github.com/christian-johnson/sakharov",
+        "description": "A lightweight TUI text editor with Jupyter notebook support"
+      }
+    ]
   }
 ]
