@@ -51,6 +51,8 @@ repos:
     rev: 1.0.0
     hooks:
       - id: sign-hugo-images-c2pa
+    args:
+      - --source-dir=assets/img_unsigned
 
   # - repo: https://github.com/gitleaks/gitleaks
   #   rev: v8.14.1
