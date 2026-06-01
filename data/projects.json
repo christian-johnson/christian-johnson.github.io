@@ -3,7 +3,7 @@
     "items": [
       {
         "title": "Rent versus Buy Calculator",
-        "image": "img/rent_vs_buy_screenshot.png",
+        "image": "img/rent_vs_buy_screenshot_signed_800.png",
         "url": "https://christian-johnson.github.io/rent-vs-buy",
         "repo": "https://github.com/christian-johnson/rent-vs-buy",
         "description": "A simulator to help determine the impact of buying compared to renting a home, offering options for refinancing and upgrading the rental, plus Monte Carlo uncertainty."
@@ -14,7 +14,7 @@
     "items": [
       {
         "title": "Borsuk-Ulam Detector",
-        "image": "img/borsuk-ulam-screenshot.png",
+        "image": "img/borsuk-ulam-screenshot_signed_800.png",
         "url": "https://christian-johnson.github.io/borsuk-ulam",
         "repo": "https://github.com/christian-johnson/borsuk-ulam",
         "description": "A quasi-real-time detector of locations on the Earth that are antipodal and have matching temperature and barometric pressure, using data from the GFS."

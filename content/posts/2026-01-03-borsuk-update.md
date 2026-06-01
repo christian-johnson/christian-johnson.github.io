@@ -21,7 +21,7 @@ Indeed, it took quite a bit of handholding to get something acceptable.
 But the end result is certainly better than something I could have written myself.
 Here's a screenshot:
 
-![Screenshot of improved Borsuk-Ulam detector](/img/borsuk-ulam-screenshot.png "Much nicer looking compared to before. And it's mobile-friendly too!")
+![Screenshot of improved Borsuk-Ulam detector](/img/borsuk-ulam-screenshot_signed.png "Much nicer looking compared to before. And it's mobile-friendly too!")
 
 The updated app now lives in its own [standalone repo](https://github.com/christian-johnson/borsuk-ulam), and can be visited on its own page [here](https://christian-johnson.github.io/borsuk-ulam).
 Enjoy!

@@ -1,0 +1,132 @@
+{
+  "/img/borsuk-ulam-screenshot_signed.png": {
+    "height": 1530,
+    "variants": [
+      {
+        "src": "/img/borsuk-ulam-screenshot_signed_800.png",
+        "width": 800
+      },
+      {
+        "src": "/img/borsuk-ulam-screenshot_signed_1280.png",
+        "width": 1280
+      },
+      {
+        "src": "/img/borsuk-ulam-screenshot_signed.png",
+        "width": 2938
+      }
+    ],
+    "width": 2938
+  },
+  "/img/duck_photo_signed.jpg": {
+    "height": 4032,
+    "variants": [
+      {
+        "src": "/img/duck_photo_signed_800.jpg",
+        "width": 800
+      },
+      {
+        "src": "/img/duck_photo_signed_1280.jpg",
+        "width": 1280
+      },
+      {
+        "src": "/img/duck_photo_signed.jpg",
+        "width": 3024
+      }
+    ],
+    "width": 3024
+  },
+  "/img/prof_pic_signed.jpg": {
+    "height": 6642,
+    "variants": [
+      {
+        "src": "/img/prof_pic_signed_800.jpg",
+        "width": 800
+      },
+      {
+        "src": "/img/prof_pic_signed_1280.jpg",
+        "width": 1280
+      },
+      {
+        "src": "/img/prof_pic_signed.jpg",
+        "width": 4428
+      }
+    ],
+    "width": 4428
+  },
+  "/img/prof_pic_small_signed.jpeg": {
+    "height": 6642,
+    "variants": [
+      {
+        "src": "/img/prof_pic_small_signed_800.jpeg",
+        "width": 800
+      },
+      {
+        "src": "/img/prof_pic_small_signed_1280.jpeg",
+        "width": 1280
+      },
+      {
+        "src": "/img/prof_pic_small_signed.jpeg",
+        "width": 4428
+      }
+    ],
+    "width": 4428
+  },
+  "/img/rent_vs_buy_screenshot_signed.png": {
+    "height": 1584,
+    "variants": [
+      {
+        "src": "/img/rent_vs_buy_screenshot_signed_800.png",
+        "width": 800
+      },
+      {
+        "src": "/img/rent_vs_buy_screenshot_signed_1280.png",
+        "width": 1280
+      },
+      {
+        "src": "/img/rent_vs_buy_screenshot_signed.png",
+        "width": 3776
+      }
+    ],
+    "width": 3776
+  },
+  "/img/rentbuy_vibecoding_signed.png": {
+    "height": 1686,
+    "variants": [
+      {
+        "src": "/img/rentbuy_vibecoding_signed.png",
+        "width": 1274
+      }
+    ],
+    "width": 1274
+  },
+  "/img/sakharov-screenshot_signed.png": {
+    "height": 1093,
+    "variants": [
+      {
+        "src": "/img/sakharov-screenshot_signed.png",
+        "width": 1600
+      }
+    ],
+    "width": 1600
+  },
+  "/img/screenshot_of_duck_photo_signed.png": {
+    "height": 1698,
+    "variants": [
+      {
+        "src": "/img/screenshot_of_duck_photo_signed.png",
+        "width": 630
+      }
+    ],
+    "width": 630
+  },
+  "/img/upshot_rentbuy_signed.png": {
+    "height": 1594,
+    "variants": [
+      {
+        "src": "/img/upshot_rentbuy_signed.png",
+        "width": 2064
+      }
+    ],
+    "width": 2064
+  }
+}
