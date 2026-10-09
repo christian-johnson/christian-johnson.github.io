@@ -1,7 +1,7 @@
 ---
 layout: post
 title: An open source election forecast model
-date: 2026-10-10
+date: 2026-10-09
 description: Can we have Nate Silver? No, we have Nate Silver at home.
 ---
 
