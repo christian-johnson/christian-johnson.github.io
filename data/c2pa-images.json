@@ -35,6 +35,16 @@
     ],
     "width": 3024
   },
+  "/img/election_forecast_screenshot_signed.png": {
+    "height": 1714,
+    "variants": [
+      {
+        "src": "/img/election_forecast_screenshot_signed.png",
+        "width": 2056
+      }
+    ],
+    "width": 2056
+  },
   "/img/prof_pic_signed.jpg": {
     "height": 6642,
     "variants": [

@@ -36,7 +36,7 @@
     "items": [
       {
         "title": "Election Forecast",
-        "image": "img/election_forecast_screenshot.png",
+        "image": "img/election_forecast_screenshot_signed.png",
         "url": "https://christianjohnson.xyz/election-forecast/",
         "repo": "https://github.com/christian-johnson/election-forecast",
         "description": "A Bayesian election forecast model for the 2026 midterms"
