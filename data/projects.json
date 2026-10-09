@@ -2,11 +2,11 @@
   {
     "items": [
       {
-        "title": "Rent versus Buy Calculator",
-        "image": "img/rent_vs_buy_screenshot_signed_800.png",
-        "url": "https://christian-johnson.github.io/rent-vs-buy",
-        "repo": "https://github.com/christian-johnson/rent-vs-buy",
-        "description": "A simulator to help determine the impact of buying compared to renting a home, offering options for refinancing and upgrading the rental, plus Monte Carlo uncertainty."
+        "title": "Election Forecast",
+        "image": "img/election_forecast_screenshot_signed.png",
+        "url": "https://christianjohnson.xyz/election-forecast/",
+        "repo": "https://github.com/christian-johnson/election-forecast",
+        "description": "A Bayesian election forecast model for the 2026 midterms"
       }
     ]
   },
@@ -35,11 +35,11 @@
   {
     "items": [
       {
-        "title": "Election Forecast",
-        "image": "img/election_forecast_screenshot_signed.png",
-        "url": "https://christianjohnson.xyz/election-forecast/",
-        "repo": "https://github.com/christian-johnson/election-forecast",
-        "description": "A Bayesian election forecast model for the 2026 midterms"
+        "title": "Rent versus Buy Calculator",
+        "image": "img/rent_vs_buy_screenshot_signed_800.png",
+        "url": "https://christian-johnson.github.io/rent-vs-buy",
+        "repo": "https://github.com/christian-johnson/rent-vs-buy",
+        "description": "A simulator to help determine the impact of buying compared to renting a home, offering options for refinancing and upgrading the rental, plus Monte Carlo uncertainty."
       }
     ]
   }
